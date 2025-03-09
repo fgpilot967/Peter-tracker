@@ -1,0 +1,1690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Peter der Große tracker</title>
+</head>
+
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: lightgreen;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.tabcontent {
+  display: none;
+}
+
+.flexbox {
+          display: flex;
+          justify-content: space-evenly;
+          text-align: center; 
+          flex-wrap: wrap;    
+    }
+
+table {
+      border: 2px;
+      border-style: solid;
+      border-color: black;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      margin-top: 40px;
+      
+      
+    }
+    th, tr, td {
+      border: 1px;
+      border-style: solid;
+      border-color: brown;
+      color: black;
+      text-align: center;
+      padding: 6px;
+    }
+
+    td {
+      width: 100px;
+    }
+
+    .grey {
+      background-color: rgb(235, 228, 228);
+      cursor: pointer;
+    }
+    .green {
+      background-color: rgb(118, 239, 126);
+      cursor: pointer;
+    }
+
+    #saveButton {
+        height: 50px;
+        width: 200px;
+        background-color: brown;
+        font-size: 20px;
+        color: aliceblue;
+        border-radius: 20px;
+        cursor: pointer;
+    }
+
+    #headPilot1, #headSubPilot1, #headPilot2, #headSubPilot2 {
+      background-color: orange;
+    }
+
+</style>
+
+<body>
+  <body style="background-color:lightgray;">
+
+    <div class="navbar">
+      <a class="tablinks" onclick="openTab(event, 'home')">Home</a>
+      <a class="tablinks" onclick="openTab(event, 'info')">Info</a>
+      
+      <div class="dropdown">
+        <button class="dropbtn">Piloten 
+        <i class="fa fa-caret-down"></i>
+        </button>
+    
+         <div class="dropdown-content">
+          <a class="tablinks" onclick="openTab(event, 'pilot1')">Pilot 1</a>
+          <a class="tablinks" onclick="openTab(event, 'pilot2')">Pilot 2</a>
+          <a class="tablinks" onclick="openTab(event, 'pilot3')">Pilot 3</a>
+          <a class="tablinks" onclick="openTab(event, 'pilot4')">Pilot 4</a>
+          <a class="tablinks" onclick="openTab(event, 'pilot5')">Pilot 5</a>
+          <a class="tablinks" onclick="openTab(event, 'pilot6')">Pilot 6</a>
+          <a class="tablinks" onclick="openTab(event, 'pilot7')">Pilot 7</a>
+          <a class="tablinks" onclick="openTab(event, 'pilot8')">Pilot 8</a>
+          <a class="tablinks" onclick="openTab(event, 'pilot9')">Pilot 9</a>
+          <a class="tablinks" onclick="openTab(event, 'pilot10')">Pilot 10</a>
+        </div>
+      </div> 
+    </div>
+    
+    <div id="home" class="tabcontent">
+      <h3>Home</h3>
+      <p>Allgemeine Information</p>
+    </div>
+    
+    <div id="info" class="tabcontent">
+      <h3>hier könnte Einstellungen hinkommen</h3>
+    </div>
+
+    <div id="pilot1" class="tabcontent">
+
+      <div class="flexbox">
+
+        <div>
+          <table id="editableTablePilot1">
+            <tr>
+              <th colspan="6" id="headPilot1"></th>
+            </tr>
+        
+            <tr>
+              <th>License</th>
+              <th>Last Check</th>
+              <th>Validity</th>
+              <th>Expiry Date</th>
+              <th>rem. Days</th>
+              <th>Email sent</th>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane1Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane1Pilot1"></td>
+              <td id="newExpiryDateLiLane1Pilot1">''</td>
+              <td id="remDaysLiLane1Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane1Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane2Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane2Pilot1"></td>
+              <td id="newExpiryDateLiLane2Pilot1"></td>
+              <td id="remDaysLiLane2Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane2Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane3Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane3Pilot1"></td>
+              <td id="newExpiryDateLiLane3Pilot1"></td>
+              <td id="remDaysLiLane3Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane3Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane4Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane4Pilot1"></td>
+              <td id="newExpiryDateLiLane4Pilot1">30 NOV 2025</td>
+              <td id="remDaysLiLane4Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane4Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane5Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane5Pilot1"></td>
+              <td id="newExpiryDateLiLane5Pilot1"></td>
+              <td id="remDaysLiLane5Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane5Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane6Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane6Pilot1"></td>
+              <td id="newExpiryDateLiLane6Pilot1"></td>
+              <td id="remDaysLiLane6Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane6Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane7Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane7Pilot1"></td>
+              <td id="newExpiryDateLiLane7Pilot1"></td>
+              <td id="remDaysLiLane7Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane7Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane8Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane8Pilot1"></td>
+              <td id="newExpiryDateLiLane8Pilot1"></td>
+              <td id="remDaysLiLane8Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane8Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane9Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane9Pilot1"></td>
+              <td id="newExpiryDateLiLane9Pilot1"></td>
+              <td id="remDaysLiLane9Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane9Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane10Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane10Pilot1"></td>
+              <td id="newExpiryDateLiLane10Pilot1"></td>
+              <td id="remDaysLiLane10Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane10Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane11Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane11Pilot1"></td>
+              <td id="newExpiryDateLiLane11Pilot1"></td>
+              <td id="remDaysLiLane11Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane11Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane12Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane12Pilot1"></td>
+              <td id="newExpiryDateLiLane12Pilot1"></td>
+              <td id="remDaysLiLane12Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane12Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane13Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane13Pilot1"></td>
+              <td id="newExpiryDateLiLane13Pilot1"></td>
+              <td id="remDaysLiLane13Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane13Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane14Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane14Pilot1"></td>
+              <td id="newExpiryDateLiLane14Pilot1"></td>
+              <td id="remDaysLiLane14Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane14Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane15Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane15Pilot1"></td>
+              <td id="newExpiryDateLiLane15Pilot1"></td>
+              <td id="remDaysLiLane15Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane15Pilot1"></td>
+            </tr>
+
+          </table>
+        </div>
+
+        <div>
+          <table id="editableTableSubPilot1">
+            <tr>
+              <th colspan="6" id="headSubPilot1"></th>
+            </tr>
+            
+            <tr>
+              <th>Subject</th>
+              <th>Initial Date</th>
+              <th>Validity</th>
+              <th>Expiry Date</th>
+              <th>rem. Days</th>
+              <th>Unlimited</th>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane1Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane1Pilot1"></td>
+              <td id="newExpiryDateSubLane1Pilot1"></td>
+              <td id="remDaysSubLane1Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane1Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane2Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane2Pilot1"></td>
+              <td id="newExpiryDateSubLane2Pilot1"></td>
+              <td id="remDaysSubLane2Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane2Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane3Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane3Pilot1"></td>
+              <td id="newExpiryDateSubLane3Pilot1"></td>
+              <td id="remDaysSubLane3Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane3Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane4Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane4Pilot1"></td>
+              <td id="newExpiryDateSubLane4Pilot1"></td>
+              <td id="remDaysSubLane4Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane4Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane5Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane5Pilot1"></td>
+              <td id="newExpiryDateSubLane5Pilot1"></td>
+              <td id="remDaysSubLane5Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane5Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane6Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane6Pilot1"></td>
+              <td id="newExpiryDateSubLane6Pilot1"></td>
+              <td id="remDaysSubLane6Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane6Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane7Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane7Pilot1"></td>
+              <td id="newExpiryDateSubLane7Pilot1"></td>
+              <td id="remDaysSubLane7Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane7Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane8Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane8Pilot1"></td>
+              <td id="newExpiryDateSubLane8Pilot1"></td>
+              <td id="remDaysSubLane8Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane8Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane9Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane9Pilot1"></td>
+              <td id="newExpiryDateSubLane9Pilot1"></td>
+              <td id="remDaysSubLane9Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane9Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane10Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane10Pilot1"></td>
+              <td id="newExpiryDateSubLane10Pilot1"></td>
+              <td id="remDaysSubLane10Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane10Pilot1"></td>
+            </tr>
+          </table>
+        </div>
+
+      </div>  
+
+      <button id="saveButton" >Update/Save values</button>
+
+    </div>
+
+    <div id="pilot2" class="tabcontent">
+
+      <div class="flexbox">
+    
+        <div>
+          <table id="editableTablePilot2">
+            <tr>
+              <th colspan="6" id="headPilot2"></th>
+            </tr>
+        
+            <tr>
+              <th>License</th>
+              <th>Last Check</th>
+              <th>Validity</th>
+              <th>Expiry Date</th>
+              <th>rem. Days</th>
+              <th>Email sent</th>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane1Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane1Pilot1"></td>
+              <td id="newExpiryDateLiLane1Pilot1"></td>
+              <td id="remDaysLiLane1Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane1Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane2Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane2Pilot1"></td>
+              <td id="newExpiryDateLiLane2Pilot1"></td>
+              <td id="remDaysLiLane2Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane2Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane3Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane3Pilot1"></td>
+              <td id="newExpiryDateLiLane3Pilot1"></td>
+              <td id="remDaysLiLane3Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane3Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane4Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane4Pilot1"></td>
+              <td id="newExpiryDateLiLane4Pilot1"></td>
+              <td id="remDaysLiLane4Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane4Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane5Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane5Pilot1"></td>
+              <td id="newExpiryDateLiLane5Pilot1"></td>
+              <td id="remDaysLiLane5Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane5Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane6Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane6Pilot1"></td>
+              <td id="newExpiryDateLiLane6Pilot1"></td>
+              <td id="remDaysLiLane6Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane6Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane7Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane7Pilot1"></td>
+              <td id="newExpiryDateLiLane7Pilot1"></td>
+              <td id="remDaysLiLane7Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane7Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane8Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane8Pilot1"></td>
+              <td id="newExpiryDateLiLane8Pilot1"></td>
+              <td id="remDaysLiLane8Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane8Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane9Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane9Pilot1"></td>
+              <td id="newExpiryDateLiLane9Pilot1"></td>
+              <td id="remDaysLiLane9Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane9Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane10Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane10Pilot1"></td>
+              <td id="newExpiryDateLiLane10Pilot1"></td>
+              <td id="remDaysLiLane10Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane10Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane11Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane11Pilot1"></td>
+              <td id="newExpiryDateLiLane11Pilot1"></td>
+              <td id="remDaysLiLane11Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane11Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane12Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane12Pilot1"></td>
+              <td id="newExpiryDateLiLane12Pilot1"></td>
+              <td id="remDaysLiLane12Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane12Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane13Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane13Pilot1"></td>
+              <td id="newExpiryDateLiLane13Pilot1"></td>
+              <td id="remDaysLiLane13Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane13Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane14Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane14Pilot1"></td>
+              <td id="newExpiryDateLiLane14Pilot1"></td>
+              <td id="remDaysLiLane14Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane14Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckLiLane15Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane15Pilot1"></td>
+              <td id="newExpiryDateLiLane15Pilot1"></td>
+              <td id="remDaysLiLane15Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentLiLane15Pilot1"></td>
+            </tr>
+          </table>
+        </div>
+      
+        <div>
+          <table id="editableTableSubPilot2">
+            <tr>
+              <th colspan="6" id="headSubPilot2"></th>
+            </tr>
+            
+            <tr>
+              <th>Subject</th>
+              <th>Initial Date</th>
+              <th>Validity</th>
+              <th>Expiry Date</th>
+              <th>rem. Days</th>
+              <th>Unlimited</th>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane1Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane1Pilot1"></td>
+              <td id="newExpiryDateSubLane1Pilot1"></td>
+              <td id="remDaysSubLane1Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane1Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane2Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane2Pilot1"></td>
+              <td id="newExpiryDateSubLane2Pilot1"></td>
+              <td id="remDaysSubLane2Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane2Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane3Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane3Pilot1"></td>
+              <td id="newExpiryDateSubLane3Pilot1"></td>
+              <td id="remDaysSubLane3Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane3Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane4Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane4Pilot1"></td>
+              <td id="newExpiryDateSubLane4Pilot1"></td>
+              <td id="remDaysSubLane4Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane4Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane5Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane5Pilot1"></td>
+              <td id="newExpiryDateSubLane5Pilot1"></td>
+              <td id="remDaysSubLane5Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane5Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane6Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane6Pilot1"></td>
+              <td id="newExpiryDateSubLane6Pilot1"></td>
+              <td id="remDaysSubLane6Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane6Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane7Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane7Pilot1"></td>
+              <td id="newExpiryDateSubLane7Pilot1"></td>
+              <td id="remDaysSubLane7Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane7Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane8Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane8Pilot1"></td>
+              <td id="newExpiryDateSubLane8Pilot1"></td>
+              <td id="remDaysSubLane8Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane8Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane9Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane9Pilot1"></td>
+              <td id="newExpiryDateSubLane9Pilot1"></td>
+              <td id="remDaysSubLane9Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane9Pilot1"></td>
+            </tr>
+            <tr>
+              <td contenteditable="true" class="green" class="subject"></td>
+              <td contenteditable="true" class="grey" id="lastCheckSubLane10Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validitySubLane10Pilot1"></td>
+              <td id="newExpiryDateSubLane10Pilot1"></td>
+              <td id="remDaysSubLane10Pilot1"></td>
+              <td ><input type="checkbox" value="sent" id="emailSentSubLane10Pilot1"></td>
+            </tr>
+          </table>
+        </div> 
+
+      </div>
+
+      <button id="saveButton" >Update/Save values</button>
+
+    </div>
+
+    <div id="peter" class="tabcontent">
+      <p> hier die tabelle von Peter</p>
+    </div>
+
+    <div id="gerhard" class="tabcontent">
+      <p> hier die tabelle von Gerhard</p>
+    </div>
+
+
+<script>
+
+    document.querySelectorAll(".tablinks").forEach(tab => {
+      tab.addEventListener("click", function () {
+      sessionStorage.setItem("activeTab", this.getAttribute("onclick").match(/'([^']+)'/)[1]);
+      });
+    });
+
+    window.addEventListener("load", function () {
+      const savedTab = sessionStorage.getItem("activeTab");
+      if (savedTab) {
+      openTab({ currentTarget: document.querySelector(`[onclick*="${savedTab}"]`) }, savedTab);
+      } else {
+      openTab({ currentTarget: document.querySelector(`[onclick*="home"]`) }, "home");
+      }
+    });
+
+
+
+  function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i=0; i<tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i=0; i<tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace("active", "");
+    }
+
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.className += "active";
+  }
+
+
+
+// Funktion zum Laden der Tabelle
+function loadTableData(tableName) {
+    const table = document.getElementById("editableTable" + tableName);
+    const storedData = JSON.parse(localStorage.getItem("tableData" + tableName));
+
+    if (storedData) {
+        console.log("Gespeicherte Daten für " + tableName + " geladen:", storedData);
+
+        for (let i = 1; i < table.rows.length; i++) {
+            const row = table.rows[i];
+            if (storedData[i - 1]) {
+                for (let j = 0; j < row.cells.length; j++) {
+                    const cell = row.cells[j];
+
+                    // Prüfe, ob die Zelle eine Checkbox enthält
+                    const input = cell.querySelector("input[type='checkbox']");
+                    if (input) {
+                        input.checked = storedData[i - 1][j] === "sent"; // Setze den Status basierend auf gespeicherten Daten
+                    } else {
+                        cell.innerText = storedData[i - 1][j]; // Normale Textzelle
+                    }
+                }
+            }
+        }
+    } else {
+        console.log("Keine gespeicherten Daten für " + tableName + " gefunden.");
+    }
+}
+
+// Funktion zum Speichern der Tabelle
+function saveTableData(tableName) {
+    const table = document.getElementById("editableTable" + tableName);
+    const rows = table.rows;
+    const tableData = [];
+
+    for (let i = 1; i < rows.length; i++) {
+        const rowData = [];
+        for (let j = 0; j < rows[i].cells.length; j++) {
+            const cell = rows[i].cells[j];
+
+            // Falls die Zelle eine Checkbox enthält
+            const input = cell.querySelector("input[type='checkbox']");
+            if (input) {
+                rowData.push(input.checked ? "sent" : "not sent"); // Speichere "sent" oder "not sent"
+            } else {
+                rowData.push(cell.innerText);
+            }
+        }
+        tableData.push(rowData);
+    }
+
+    localStorage.setItem("tableData" + tableName, JSON.stringify(tableData));
+    console.log("Gespeicherte Daten für " + tableName + ":", tableData);
+}
+
+// Buttons zum Speichern der Daten (aufrufbar für jede Tabelle)
+document.getElementById("saveButton").onclick = function() {
+    saveTableData("Pilot1");
+    saveTableData("SubPilot1");
+    //saveTableData("Gratton");
+   // saveTableData("Raymond");
+    //saveTableData("Barrie");
+    //saveTableData("Granter");
+    location.reload();
+  
+};
+
+window.onload = function() {
+    loadTableData("Pilot1");
+    loadTableData("SubPilot1");
+    //loadTableData("Gratton");
+    //loadTableData("Raymond");
+    //loadTableData("Barrie");
+    //loadTableData("Granter");
+    const currentDate = new Date();
+    
+    setTimeout(() => {
+
+
+
+ // LiLane1 Pilot1 --------Anfang---------------------------------------------
+
+      const NameTablePilot1 = "Pilot Name 1";
+      const LicenseNameTablePilot1 = "123456789";
+      document.querySelector("#headPilot1").innerText = `${NameTablePilot1}  / License No.: ${LicenseNameTablePilot1}`;
+      document.querySelector("#headSubPilot1").innerText = `${NameTablePilot1}  / License No.: ${LicenseNameTablePilot1}`;
+
+// den string (p) in eine Number convertieren mit dem + Symbol
+                    let ValidityStringLiLane1Pilot1 = document.getElementById("validityLiLane1Pilot1").innerText;
+                    let validityLiLane1Pilot1 = +ValidityStringLiLane1Pilot1;
+                     
+// diese function addiert die Monate zu dem Datum
+                    function addMonthsToDateLiLane1Pilot1(date, months) {
+                        let newDateLiLane1Pilot1 = new Date(document.getElementById("lastCheckLiLane1Pilot1").innerText);
+                        newDateLiLane1Pilot1.setMonth(newDateLiLane1Pilot1.getMonth() + months);
+                        return newDateLiLane1Pilot1;
+                    }
+
+// Berechnung: Last Check + "validityMedicalPilot1" Monate
+// das "new Date" nimmt den Inhalt aus id=lastCheck als Datum (es muss "Jahr-Monat-Tag" sein)
+                    let LastCheckLiLane1Pilot1 = new Date(document.getElementById("lastCheckLiLane1Pilot1").innerText);
+            
+// hier wird die function "addMonthsToDate" ausgeführt
+                    let NewExpiryDateLiLane1Pilot1 = addMonthsToDateLiLane1Pilot1(LastCheckLiLane1Pilot1, validityLiLane1Pilot1);
+                    document.getElementById("newExpiryDateLiLane1Pilot1").innerText = NewExpiryDateLiLane1Pilot1.toLocaleDateString();
+           
+                    const remainingTimeLiLane1Pilot1 = NewExpiryDateLiLane1Pilot1 - currentDate;
+                    const remainingDaysLiLane1Pilot1 = Math.floor(remainingTimeLiLane1Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysLiLane1Pilot1").innerText = remainingDaysLiLane1Pilot1;
+                    if (remainingDaysLiLane1Pilot1 < 60 && !document.getElementById("emailSentLiLane1Pilot1").checked) {
+                      const recipient = 'mark.Pilot1@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = 'Automated Email - ATPL license';
+                      const body = 'Your ATPL is going to expire. Please contact Plato.';
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSentLiLane1Pilot1").checked = true;
+                    }
+
+// LiLane1 Pilot1 --------Ende---------------------------------------------
+
+
+// LiLane 2 Pilot1 --------Anfang---------------------------------------------
+
+                    let ValidityStringLiLane2Pilot1 = document.getElementById("validityLiLane2Pilot1").innerText;
+                    let validityLiLane2Pilot1 = +ValidityStringLiLane2Pilot1;
+
+                    function addMonthsToDateLiLane2Pilot1(date, months) {
+                        let newDateLiLane2Pilot1 = new Date(document.getElementById("lastCheckLiLane2Pilot1").innerText);
+                        newDateLiLane2Pilot1.setMonth(newDateLiLane2Pilot1.getMonth() + months);
+                        return newDateLiLane2Pilot1;
+                    }
+
+                    let LastCheckLiLane2Pilot1 = new Date(document.getElementById("lastCheckLiLane2Pilot1").innerText);
+
+                    let NewExpiryDateLiLane2Pilot1 = addMonthsToDateLiLane2Pilot1(LastCheckLiLane2Pilot1, validityLiLane2Pilot1);
+                    document.getElementById("newExpiryDateLiLane2Pilot1").innerText = NewExpiryDateLiLane2Pilot1.toLocaleDateString();
+              
+                    const remainingTimeLiLane2Pilot1 = NewExpiryDateLiLane2Pilot1 - currentDate;
+                    const remainingDaysLiLane2Pilot1 = Math.floor(remainingTimeLiLane2Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysLiLane2Pilot1").innerText = remainingDaysLiLane2Pilot1;
+                    if (remainingDaysLiLane2Pilot1 < 60 && !document.getElementById("emailSentLiLane2Pilot1").checked) {
+                      const recipient = 'mark.Pilot1@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - LiLane2 license';
+                      const body = 'Your LiLane2 is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentLiLane2Pilot1").checked = true;
+                    }
+
+// LiLane2 Pilot1 --------Ende---------------------------------------------
+
+
+// LiLane3 Pilot1 --------Anfang---------------------------------------------
+
+                    let ValidityStringLiLane3Pilot1 = document.getElementById("validityLiLane3Pilot1").innerText;
+                    let validityLiLane3Pilot1 = +ValidityStringLiLane3Pilot1;
+
+                    function addMonthsToDateLiLane3Pilot1(date, months) {
+                        let newDateLiLane3Pilot1 = new Date(document.getElementById("lastCheckLiLane3Pilot1").innerText);
+                        newDateLiLane3Pilot1.setMonth(newDateLiLane3Pilot1.getMonth() + months);
+                        return newDateLiLane3Pilot1;
+                    }
+
+                    let LastCheckLiLane3Pilot1 = new Date(document.getElementById("lastCheckLiLane3Pilot1").innerText);
+            
+                    let NewExpiryDateLiLane3Pilot1 = addMonthsToDateLiLane3Pilot1(LastCheckLiLane3Pilot1, validityLiLane3Pilot1);
+                    document.getElementById("newExpiryDateLiLane3Pilot1").innerText = NewExpiryDateLiLane3Pilot1.toLocaleDateString();
+           
+                    const remainingTimeLiLane3Pilot1 = NewExpiryDateLiLane3Pilot1 - currentDate;
+                    const remainingDaysLiLane3Pilot1 = Math.floor(remainingTimeLiLane3Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysLiLane3Pilot1").innerText = remainingDaysLiLane3Pilot1;
+                    if (remainingDaysLiLane3Pilot1 < 60 && !document.getElementById("emailSentLiLane3Pilot1").checked) {
+                      const recipient = 'mark.Pilot1@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - CASA LiLane3 license';
+                      const body = 'Your CASA LiLane3 is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentLiLane3Pilot1").checked = true;
+                    }
+
+// LiLane3 Pilot1 --------Ende---------------------------------------------   
+
+
+// LiLane4 Pilot1 --------Anfang---------------------------------------------
+
+                    let ValidityStringLiLane4Pilot1 = document.getElementById("validityLiLane4Pilot1").innerText;
+                    let validityLiLane4Pilot1 = +ValidityStringLiLane4Pilot1;
+
+                    function addMonthsToDateLiLane4Pilot1(date, months) {
+                        let newDateLiLane4Pilot1 = new Date(document.getElementById("lastCheckLiLane4Pilot1").innerText);
+                        newDateLiLane4Pilot1.setMonth(newDateLiLane4Pilot1.getMonth() + months);
+                        return newDateLiLane4Pilot1;
+                    }
+
+                    let LastCheckLiLane4Pilot1 = new Date(document.getElementById("lastCheckLiLane4Pilot1").innerText);
+            
+                    let NewExpiryDateLiLane4Pilot1 = addMonthsToDateLiLane4Pilot1(LastCheckLiLane4Pilot1, validityLiLane4Pilot1);
+                    document.getElementById("newExpiryDateLiLane4Pilot1").innerText = NewExpiryDateLiLane4Pilot1.toLocaleDateString();
+           
+                    const remainingTimeLiLane4Pilot1 = NewExpiryDateLiLane4Pilot1 - currentDate;
+                    const remainingDaysLiLane4Pilot1 = Math.floor(remainingTimeLiLane4Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysLiLane4Pilot1").innerText = remainingDaysLiLane4Pilot1;
+                    if (remainingDaysLiLane4Pilot1 < 60 && !document.getElementById("emailSentLiLane4Pilot1").checked) {
+                      const recipient = 'mark.Pilot1@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - S & P license';
+                      const body = 'Your S & P is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentLiLane4Pilot1").checked = true;
+                    }
+
+// S&P Pilot1 --------Ende---------------------------------------------
+
+
+// LiLane5 Pilot1 --------Anfang---------------------------------------------
+
+                    let ValidityStringLiLane5Pilot1 = document.getElementById("validityLiLane5Pilot1").innerText;
+                    let validityLiLane5Pilot1 = +ValidityStringLiLane5Pilot1;
+
+                    function addMonthsToDateLiLane5Pilot1(date, months) {
+                        let newDateLiLane5Pilot1 = new Date(document.getElementById("lastCheckLiLane5Pilot1").innerText);
+                        newDateLiLane5Pilot1.setMonth(newDateLiLane5Pilot1.getMonth() + months);
+                        return newDateLiLane5Pilot1;
+                    }
+
+                    let LastCheckLiLane5Pilot1 = new Date(document.getElementById("lastCheckLiLane5Pilot1").innerText);
+            
+                    let NewExpiryDateLiLane5Pilot1 = addMonthsToDateLiLane5Pilot1(LastCheckLiLane5Pilot1, validityLiLane5Pilot1);
+                    document.getElementById("newExpiryDateLiLane5Pilot1").innerText = NewExpiryDateLiLane5Pilot1.toLocaleDateString();
+           
+                    const remainingTimeLiLane5Pilot1 = NewExpiryDateLiLane5Pilot1 - currentDate;
+                    const remainingDaysLiLane5Pilot1 = Math.floor(remainingTimeLiLane5Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysLiLane5Pilot1").innerText = remainingDaysLiLane5Pilot1;
+                    if (remainingDaysLiLane5Pilot1 < 60 && !document.getElementById("emailSentLiLane5Pilot1").checked) {
+                      const recipient = 'mark.Pilot1@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - LiLane5 license';
+                      const body = 'Your LiLane5 is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentLiLane5Pilot1").checked = true;
+                    }
+
+// LiLane5 Pilot1 --------Ende---------------------------------------------
+
+
+// LiLane6 Pilot1 --------Anfang---------------------------------------------
+
+                    let ValidityStringLiLane6Pilot1 = document.getElementById("validityLiLane6Pilot1").innerText;
+                    let validityLiLane6Pilot1 = +ValidityStringLiLane6Pilot1;
+
+
+                    function addMonthsToDateLiLane6Pilot1(date, months) {
+                        let newDateLiLane6Pilot1 = new Date(document.getElementById("lastCheckLiLane6Pilot1").innerText);
+                        newDateLiLane6Pilot1.setMonth(newDateLiLane6Pilot1.getMonth() + months);
+                        return newDateLiLane6Pilot1;
+                    }
+
+                    let LastCheckLiLane6Pilot1 = new Date(document.getElementById("lastCheckLiLane6Pilot1").innerText);
+            
+                    let NewExpiryDateLiLane6Pilot1 = addMonthsToDateLiLane6Pilot1(LastCheckLiLane6Pilot1, validityLiLane6Pilot1);
+                    document.getElementById("newExpiryDateLiLane6Pilot1").innerText = NewExpiryDateLiLane6Pilot1.toLocaleDateString();
+           
+                    const remainingTimeLiLane6Pilot1 = NewExpiryDateLiLane6Pilot1 - currentDate;
+                    const remainingDaysLiLane6Pilot1 = Math.floor(remainingTimeLiLane6Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysLiLane6Pilot1").innerText = remainingDaysLiLane6Pilot1;
+                    if (remainingDaysLiLane6Pilot1 < 60 && !document.getElementById("emailSentLiLane6Pilot1").checked) {
+                      const recipient = 'mark.Pilot1@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - FER PDP license';
+                      const body = 'Your FER PDP is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentLiLane6Pilot1").checked = true;
+                    }
+
+// LiLane6 Pilot1 --------Ende---------------------------------------------   
+
+
+// LiLane7 Pilot1 --------Anfang---------------------------------------------
+
+                    let ValidityStringLiLane7Pilot1 = document.getElementById("validityLiLane7Pilot1").innerText;
+                    let validityLiLane7Pilot1 = +ValidityStringLiLane7Pilot1;
+
+                    function addMonthsToDateLiLane7Pilot1(date, months) {
+                        let newDateLiLane7Pilot1 = new Date(document.getElementById("lastCheckLiLane7Pilot1").innerText);
+                        newDateLiLane7Pilot1.setMonth(newDateLiLane7Pilot1.getMonth() + months);
+                        return newDateLiLane7Pilot1;
+                    }
+
+                    let LastCheckLiLane7Pilot1 = new Date(document.getElementById("lastCheckLiLane7Pilot1").innerText);
+            
+                    let NewExpiryDateLiLane7Pilot1 = addMonthsToDateLiLane7Pilot1(LastCheckLiLane7Pilot1, validityLiLane7Pilot1);
+                    document.getElementById("newExpiryDateLiLane7Pilot1").innerText = NewExpiryDateLiLane7Pilot1.toLocaleDateString();
+ 
+                    const remainingTimeLiLane7Pilot1 = NewExpiryDateLiLane7Pilot1 - currentDate;
+                    const remainingDaysLiLane7Pilot1 = Math.floor(remainingTimeLiLane7Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysLiLane7Pilot1").innerText = remainingDaysLiLane7Pilot1;
+                    if (remainingDaysLiLane7Pilot1 < 60 && !document.getElementById("emailSentLiLane7Pilot1").checked) {
+                      const recipient = 'mark.Pilot1@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - LiLane7 currency license';
+                      const body = 'Your LiLane7 currency is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentLiLane7Pilot1").checked = true;
+                    }
+
+// LiLane7 Pilot1 --------Ende---------------------------------------------
+
+
+// LiLane8 Pilot1 --------Anfang---------------------------------------------
+
+                    let ValidityStringLiLane8Pilot1 = document.getElementById("validityLiLane8Pilot1").innerText;
+                    let validityLiLane8Pilot1 = +ValidityStringLiLane8Pilot1;
+
+                    function addMonthsToDateLiLane8Pilot1(date, months) {
+                        let newDateLiLane8Pilot1 = new Date(document.getElementById("lastCheckLiLane8Pilot1").innerText);
+                        newDateLiLane8Pilot1.setMonth(newDateLiLane8Pilot1.getMonth() + months);
+                        return newDateLiLane8Pilot1;
+                    }
+
+                    let LastCheckLiLane8Pilot1 = new Date(document.getElementById("lastCheckLiLane8Pilot1").innerText);
+            
+                    let NewExpiryDateLiLane8Pilot1 = addMonthsToDateLiLane8Pilot1(LastCheckLiLane8Pilot1, validityLiLane8Pilot1);
+                    document.getElementById("newExpiryDateLiLane8Pilot1").innerText = NewExpiryDateLiLane8Pilot1.toLocaleDateString();
+           
+                    const remainingTimeLiLane8Pilot1 = NewExpiryDateLiLane8Pilot1 - currentDate;
+                    const remainingDaysLiLane8Pilot1 = Math.floor(remainingTimeLiLane8Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysLiLane8Pilot1").innerText = remainingDaysLiLane8Pilot1;
+                    if (remainingDaysLiLane8Pilot1 < 60 && !document.getElementById("emailSentLiLane8Pilot1").checked) {
+                      const recipient = 'mark.Pilot1@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - LiLane8 license';
+                      const body = 'Your LiLane8 is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentLiLane8Pilot1").checked = true;
+                    }
+
+// LiLane8 Pilot1 --------Ende---------------------------------------------
+
+// LiLane9 Pilot1 --------Anfang---------------------------------------------
+
+let ValidityStringLiLane9Pilot1 = document.getElementById("validityLiLane9Pilot1").innerText;
+                    let validityLiLane9Pilot1 = +ValidityStringLiLane9Pilot1;
+
+                    function addMonthsToDateLiLane9Pilot1(date, months) {
+                        let newDateLiLane9Pilot1 = new Date(document.getElementById("lastCheckLiLane9Pilot1").innerText);
+                        newDateLiLane9Pilot1.setMonth(newDateLiLane9Pilot1.getMonth() + months);
+                        return newDateLiLane9Pilot1;
+                    }
+
+                    let LastCheckLiLane9Pilot1 = new Date(document.getElementById("lastCheckLiLane9Pilot1").innerText);
+                    let NewExpiryDateLiLane9Pilot1 = addMonthsToDateLiLane9Pilot1(LastCheckLiLane9Pilot1, validityLiLane9Pilot1);
+                    document.getElementById("newExpiryDateLiLane9Pilot1").innerText = NewExpiryDateLiLane9Pilot1.toLocaleDateString();
+           
+                    const remainingTimeLiLane9Pilot1 = NewExpiryDateLiLane9Pilot1 - currentDate;
+                    const remainingDaysLiLane9Pilot1 = Math.floor(remainingTimeLiLane9Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysLiLane9Pilot1").innerText = remainingDaysLiLane9Pilot1;
+                    if (remainingDaysLiLane9Pilot1 < 60 && !document.getElementById("emailSentLiLane9Pilot1").checked) {
+                      const recipient = 'mark.Pilot1@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - LiLane9 license';
+                      const body = 'Your LiLane9 is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentLiLane9Pilot1").checked = true;
+                    }
+
+// LiLane9 Pilot1 --------Ende---------------------------------------------
+
+// LiLane10 Pilot1 --------Anfang---------------------------------------------
+
+let ValidityStringLiLane10Pilot1 = document.getElementById("validityLiLane10Pilot1").innerText;
+                    let validityLiLane10Pilot1 = +ValidityStringLiLane10Pilot1;
+
+                    function addMonthsToDateLiLane10Pilot1(date, months) {
+                        let newDateLiLane10Pilot1 = new Date(document.getElementById("lastCheckLiLane10Pilot1").innerText);
+                        newDateLiLane10Pilot1.setMonth(newDateLiLane10Pilot1.getMonth() + months);
+                        return newDateLiLane10Pilot1;
+                    }
+
+                    let LastCheckLiLane10Pilot1 = new Date(document.getElementById("lastCheckLiLane10Pilot1").innerText);
+                    let NewExpiryDateLiLane10Pilot1 = addMonthsToDateLiLane10Pilot1(LastCheckLiLane10Pilot1, validityLiLane10Pilot1);
+                    document.getElementById("newExpiryDateLiLane10Pilot1").innerText = NewExpiryDateLiLane10Pilot1.toLocaleDateString();
+           
+                    const remainingTimeLiLane10Pilot1 = NewExpiryDateLiLane10Pilot1 - currentDate;
+                    const remainingDaysLiLane10Pilot1 = Math.floor(remainingTimeLiLane10Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysLiLane10Pilot1").innerText = remainingDaysLiLane10Pilot1;
+                    if (remainingDaysLiLane10Pilot1 < 60 && !document.getElementById("emailSentLiLane10Pilot1").checked) {
+                      const recipient = 'mark.Pilot1@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - LiLane10 license';
+                      const body = 'Your LiLane10 is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentLiLane10Pilot1").checked = true;
+                    }
+
+// LiLane10 Pilot1 --------Ende---------------------------------------------
+
+// LiLane11 Pilot1 --------Anfang---------------------------------------------
+
+let ValidityStringLiLane11Pilot1 = document.getElementById("validityLiLane11Pilot1").innerText;
+                    let validityLiLane11Pilot1 = +ValidityStringLiLane11Pilot1;
+
+                    function addMonthsToDateLiLane11Pilot1(date, months) {
+                        let newDateLiLane11Pilot1 = new Date(document.getElementById("lastCheckLiLane11Pilot1").innerText);
+                        newDateLiLane11Pilot1.setMonth(newDateLiLane11Pilot1.getMonth() + months);
+                        return newDateLiLane11Pilot1;
+                    }
+
+                    let LastCheckLiLane11Pilot1 = new Date(document.getElementById("lastCheckLiLane11Pilot1").innerText);
+                    let NewExpiryDateLiLane11Pilot1 = addMonthsToDateLiLane11Pilot1(LastCheckLiLane11Pilot1, validityLiLane11Pilot1);
+                    document.getElementById("newExpiryDateLiLane11Pilot1").innerText = NewExpiryDateLiLane11Pilot1.toLocaleDateString();
+           
+                    const remainingTimeLiLane11Pilot1 = NewExpiryDateLiLane11Pilot1 - currentDate;
+                    const remainingDaysLiLane11Pilot1 = Math.floor(remainingTimeLiLane11Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysLiLane11Pilot1").innerText = remainingDaysLiLane11Pilot1;
+                    if (remainingDaysLiLane11Pilot1 < 60 && !document.getElementById("emailSentLiLane11Pilot1").checked) {
+                      const recipient = 'mark.Pilot1@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - LiLane11 license';
+                      const body = 'Your LiLane11 is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentLiLane11Pilot1").checked = true;
+                    }
+
+// LiLane11 Pilot1 --------Ende---------------------------------------------
+
+// LiLane12 Pilot1 --------Anfang---------------------------------------------
+
+let ValidityStringLiLane12Pilot1 = document.getElementById("validityLiLane12Pilot1").innerText;
+                    let validityLiLane12Pilot1 = +ValidityStringLiLane12Pilot1;
+
+                    function addMonthsToDateLiLane12Pilot1(date, months) {
+                        let newDateLiLane12Pilot1 = new Date(document.getElementById("lastCheckLiLane12Pilot1").innerText);
+                        newDateLiLane12Pilot1.setMonth(newDateLiLane12Pilot1.getMonth() + months);
+                        return newDateLiLane12Pilot1;
+                    }
+
+                    let LastCheckLiLane12Pilot1 = new Date(document.getElementById("lastCheckLiLane12Pilot1").innerText);
+                    let NewExpiryDateLiLane12Pilot1 = addMonthsToDateLiLane12Pilot1(LastCheckLiLane12Pilot1, validityLiLane12Pilot1);
+                    document.getElementById("newExpiryDateLiLane12Pilot1").innerText = NewExpiryDateLiLane12Pilot1.toLocaleDateString();
+           
+                    const remainingTimeLiLane12Pilot1 = NewExpiryDateLiLane12Pilot1 - currentDate;
+                    const remainingDaysLiLane12Pilot1 = Math.floor(remainingTimeLiLane12Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysLiLane12Pilot1").innerText = remainingDaysLiLane12Pilot1;
+                    if (remainingDaysLiLane12Pilot1 < 60 && !document.getElementById("emailSentLiLane12Pilot1").checked) {
+                      const recipient = 'mark.Pilot1@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - LiLane12 license';
+                      const body = 'Your LiLane12 is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentLiLane12Pilot1").checked = true;
+                    }
+
+// LiLane12 Pilot1 --------Ende---------------------------------------------
+
+// LiLane13 Pilot1 --------Anfang---------------------------------------------
+
+let ValidityStringLiLane13Pilot1 = document.getElementById("validityLiLane13Pilot1").innerText;
+                    let validityLiLane13Pilot1 = +ValidityStringLiLane13Pilot1;
+
+                    function addMonthsToDateLiLane13Pilot1(date, months) {
+                        let newDateLiLane13Pilot1 = new Date(document.getElementById("lastCheckLiLane13Pilot1").innerText);
+                        newDateLiLane13Pilot1.setMonth(newDateLiLane13Pilot1.getMonth() + months);
+                        return newDateLiLane13Pilot1;
+                    }
+
+                    let LastCheckLiLane13Pilot1 = new Date(document.getElementById("lastCheckLiLane13Pilot1").innerText);
+                    let NewExpiryDateLiLane13Pilot1 = addMonthsToDateLiLane13Pilot1(LastCheckLiLane13Pilot1, validityLiLane13Pilot1);
+                    document.getElementById("newExpiryDateLiLane13Pilot1").innerText = NewExpiryDateLiLane13Pilot1.toLocaleDateString();
+           
+                    const remainingTimeLiLane13Pilot1 = NewExpiryDateLiLane13Pilot1 - currentDate;
+                    const remainingDaysLiLane13Pilot1 = Math.floor(remainingTimeLiLane13Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysLiLane13Pilot1").innerText = remainingDaysLiLane13Pilot1;
+                    if (remainingDaysLiLane13Pilot1 < 60 && !document.getElementById("emailSentLiLane13Pilot1").checked) {
+                      const recipient = 'mark.Pilot1@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - LiLane13 license';
+                      const body = 'Your LiLane13 is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentLiLane13Pilot1").checked = true;
+                    }
+
+// LiLane13 Pilot1 --------Ende---------------------------------------------
+
+// LiLane14 Pilot1 --------Anfang---------------------------------------------
+
+let ValidityStringLiLane14Pilot1 = document.getElementById("validityLiLane14Pilot1").innerText;
+                    let validityLiLane14Pilot1 = +ValidityStringLiLane14Pilot1;
+
+                    function addMonthsToDateLiLane14Pilot1(date, months) {
+                        let newDateLiLane14Pilot1 = new Date(document.getElementById("lastCheckLiLane14Pilot1").innerText);
+                        newDateLiLane14Pilot1.setMonth(newDateLiLane14Pilot1.getMonth() + months);
+                        return newDateLiLane14Pilot1;
+                    }
+
+                    let LastCheckLiLane14Pilot1 = new Date(document.getElementById("lastCheckLiLane14Pilot1").innerText);
+                    let NewExpiryDateLiLane14Pilot1 = addMonthsToDateLiLane14Pilot1(LastCheckLiLane14Pilot1, validityLiLane14Pilot1);
+                    document.getElementById("newExpiryDateLiLane14Pilot1").innerText = NewExpiryDateLiLane14Pilot1.toLocaleDateString();
+           
+                    const remainingTimeLiLane14Pilot1 = NewExpiryDateLiLane14Pilot1 - currentDate;
+                    const remainingDaysLiLane14Pilot1 = Math.floor(remainingTimeLiLane14Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysLiLane14Pilot1").innerText = remainingDaysLiLane14Pilot1;
+                    if (remainingDaysLiLane14Pilot1 < 60 && !document.getElementById("emailSentLiLane14Pilot1").checked) {
+                      const recipient = 'mark.Pilot1@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - LiLane14 license';
+                      const body = 'Your LiLane14 is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentLiLane14Pilot1").checked = true;
+                    }
+
+// LiLane14 Pilot1 --------Ende---------------------------------------------
+
+// LiLane14 Pilot1 --------Anfang---------------------------------------------
+
+let ValidityStringLiLane15Pilot1 = document.getElementById("validityLiLane15Pilot1").innerText;
+                    let validityLiLane15Pilot1 = +ValidityStringLiLane15Pilot1;
+
+                    function addMonthsToDateLiLane15Pilot1(date, months) {
+                        let newDateLiLane15Pilot1 = new Date(document.getElementById("lastCheckLiLane15Pilot1").innerText);
+                        newDateLiLane15Pilot1.setMonth(newDateLiLane15Pilot1.getMonth() + months);
+                        return newDateLiLane15Pilot1;
+                    }
+
+                    let LastCheckLiLane15Pilot1 = new Date(document.getElementById("lastCheckLiLane15Pilot1").innerText);
+                    let NewExpiryDateLiLane15Pilot1 = addMonthsToDateLiLane15Pilot1(LastCheckLiLane15Pilot1, validityLiLane15Pilot1);
+                    document.getElementById("newExpiryDateLiLane15Pilot1").innerText = NewExpiryDateLiLane15Pilot1.toLocaleDateString();
+           
+                    const remainingTimeLiLane15Pilot1 = NewExpiryDateLiLane15Pilot1 - currentDate;
+                    const remainingDaysLiLane15Pilot1 = Math.floor(remainingTimeLiLane15Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysLiLane15Pilot1").innerText = remainingDaysLiLane15Pilot1;
+                    if (remainingDaysLiLane15Pilot1 < 60 && !document.getElementById("emailSentLiLane15Pilot1").checked) {
+                      const recipient = 'mark.Pilot1@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - LiLane15 license';
+                      const body = 'Your LiLane15 is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentLiLane15Pilot1").checked = true;
+                    }
+
+// LiLane15 Pilot1 --------Ende---------------------------------------------
+
+
+
+
+
+
+
+
+// =======================================================================
+
+// SubLane1 Pilot1 --------Anfang---------------------------------------------
+
+                    let ValidityStringSubLane1Pilot1 = document.getElementById("validitySubLane1Pilot1").innerText;
+                    let validitySubLane1Pilot1 = +ValidityStringSubLane1Pilot1;
+
+                    function addMonthsToDateSubLane1Pilot1(date, months) {
+                        let newDateSubLane1Pilot1 = new Date(document.getElementById("lastCheckSubLane1Pilot1").innerText);
+                        newDateSubLane1Pilot1.setMonth(newDateSubLane1Pilot1.getMonth() + months);
+                        return newDateSubLane1Pilot1;
+                    }
+
+                    let LastCheckSubLane1Pilot1 = new Date(document.getElementById("lastCheckSubLane1Pilot1").innerText);
+            
+                    let NewExpiryDateSubLane1Pilot1 = addMonthsToDateSubLane1Pilot1(LastCheckSubLane1Pilot1, validitySubLane1Pilot1);
+                    document.getElementById("newExpiryDateSubLane1Pilot1").innerText = NewExpiryDateSubLane1Pilot1.toLocaleDateString();
+
+                    const remainingTimeSubLane1Pilot1 = NewExpiryDateSubLane1Pilot1 - currentDate;
+                    const remainingDaysSubLane1Pilot1 = Math.floor(remainingTimeSubLane1Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysSubLane1Pilot1").innerText = remainingDaysSubLane1Pilot1;
+                    if (remainingDaysSubLane1Pilot1 < 60 && !document.getElementById("emailSentSubLane1Pilot1").checked) {
+                      const recipient = 'alexander.campbell@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - LPC license';
+                      const body = 'Your LPC is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentSubLane1Pilot1").checked = true;
+                    }
+
+// SubLane1 Pilot1 --------Ende---------------------------------------------
+
+
+// Sublane2 Pilot1 --------Anfang---------------------------------------------
+
+                    let ValidityStringSubLane2Pilot1 = document.getElementById("validitySubLane2Pilot1").innerText;
+                    let validitySubLane2Pilot1 = +ValidityStringSubLane2Pilot1;
+
+                    function addMonthsToDateSubLane2Pilot1(date, months) {
+                        let newDateSubLane2Pilot1 = new Date(document.getElementById("lastCheckSubLane2Pilot1").innerText);
+                        newDateSubLane2Pilot1.setMonth(newDateSubLane2Pilot1.getMonth() + months);
+                        return newDateSubLane2Pilot1;
+                    }
+
+                    let LastCheckSubLane2Pilot1 = new Date(document.getElementById("lastCheckSubLane2Pilot1").innerText);
+            
+                    let NewExpiryDateSubLane2Pilot1 = addMonthsToDateSubLane2Pilot1(LastCheckSubLane2Pilot1, validitySubLane2Pilot1);
+                    document.getElementById("newExpiryDateSubLane2Pilot1").innerText = NewExpiryDateSubLane2Pilot1.toLocaleDateString();
+            
+                    const remainingTimeSubLane2Pilot1 = NewExpiryDateSubLane2Pilot1 - currentDate;
+                    const remainingDaysSubLane2Pilot1 = Math.floor(remainingTimeSubLane2Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysSubLane2Pilot1").innerText = remainingDaysSubLane2Pilot1;
+                    if (remainingDaysSubLane2Pilot1 < 60 && !document.getElementById("emailSentSubLane2Pilot1").checked) {
+                      const recipient = 'alexander.campbell@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - Medical license';
+                      const body = 'Your Medical is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentSubLane2Pilot1").checked = true;
+                    }
+
+// SubLane2 Pilot1 --------Ende---------------------------------------------
+
+
+// SubLane3 Pilot1 --------Anfang---------------------------------------------
+
+                    let ValidityStringSubLane3Pilot1 = document.getElementById("validitySubLane3Pilot1").innerText;
+                    let validitySubLane3Pilot1 = +ValidityStringSubLane3Pilot1;
+
+                    function addMonthsToDateSubLane3Pilot1(date, months) {
+                        let newDateSubLane3Pilot1 = new Date(document.getElementById("lastCheckSubLane3Pilot1").innerText);
+                        newDateSubLane3Pilot1.setMonth(newDateSubLane3Pilot1.getMonth() + months);
+                        return newDateSubLane3Pilot1;
+                    }
+
+                    let LastCheckSubLane3Pilot1 = new Date(document.getElementById("lastCheckSubLane3Pilot1").innerText);
+            
+                    let NewExpiryDateSubLane3Pilot1 = addMonthsToDateSubLane3Pilot1(LastCheckSubLane3Pilot1, validitySubLane3Pilot1);
+                    document.getElementById("newExpiryDateSubLane3Pilot1").innerText = NewExpiryDateSubLane3Pilot1.toLocaleDateString();
+
+                    const remainingTimeSubLane3Pilot1 = NewExpiryDateSubLane3Pilot1 - currentDate;
+                    const remainingDaysSubLane3Pilot1 = Math.floor(remainingTimeSubLane3Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysSubLane3Pilot1").innerText = remainingDaysSubLane3Pilot1;
+                    if (remainingDaysSubLane3Pilot1 < 60 && !document.getElementById("emailSentSubLane3Pilot1").checked) {
+                      const recipient = 'alexander.campbell@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - FPC license';
+                      const body = 'Your FPC is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentSubLane3Pilot1").checked = true;
+                    }
+
+// SubLane3 Pilot1 Campbell --------Ende---------------------------------------------   
+
+
+// SubLane4 Pilot1 --------Anfang---------------------------------------------
+
+                    let ValidityStringSubLane4Pilot1 = document.getElementById("validitySubLane4Pilot1").innerText;
+                    let validitySubLane4Pilot1 = +ValidityStringSubLane4Pilot1;
+
+                    function addMonthsToDateSubLane4Pilot1(date, months) {
+                        let newDateSubLane4Pilot1 = new Date(document.getElementById("lastCheckSubLane4Pilot1").innerText);
+                        newDateSubLane4Pilot1.setMonth(newDateSubLane4Pilot1.getMonth() + months);
+                        return newDateSubLane4Pilot1;
+                    }
+
+                    let LastCheckSubLane4Pilot1 = new Date(document.getElementById("lastCheckSubLane4Pilot1").innerText);
+            
+                    let NewExpiryDateSubLane4Pilot1 = addMonthsToDateSubLane4Pilot1(LastCheckSubLane4Pilot1, validitySubLane4Pilot1);
+                    document.getElementById("newExpiryDateSubLane4Pilot1").innerText = NewExpiryDateSubLane4Pilot1.toLocaleDateString();
+            
+                    const remainingTimeSubLane4Pilot1 = NewExpiryDateSubLane4Pilot1 - currentDate;
+                    const remainingDaysSubLane4Pilot1 = Math.floor(remainingTimeSubLane4Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysSubLane4Pilot1").innerText = remainingDaysSubLane4Pilot1;
+                    if (remainingDaysSubLane4Pilot1 < 60 && !document.getElementById("emailSentSubLane4Pilot1").checked) {
+                      const recipient = 'alexander.campbell@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - S & P license';
+                      const body = 'Your S & P is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentSubLane4Pilot1").checked = true;
+                    }
+
+// SubLane4 Pilot1 --------Ende---------------------------------------------
+
+
+// SubLane5 Pilot1 --------Anfang---------------------------------------------
+
+                    let ValidityStringSubLane5Pilot1 = document.getElementById("validitySubLane5Pilot1").innerText;
+                    let validitySubLane5Pilot1 = +ValidityStringSubLane5Pilot1;
+
+                    function addMonthsToDateSubLane5Pilot1(date, months) {
+                        let newDateSubLane5Pilot1 = new Date(document.getElementById("lastCheckSubLane5Pilot1").innerText);
+                        newDateSubLane5Pilot1.setMonth(newDateSubLane5Pilot1.getMonth() + months);
+                        return newDateSubLane5Pilot1;
+                    }
+
+                    let LastCheckSubLane5Pilot1 = new Date(document.getElementById("lastCheckSubLane5Pilot1").innerText);
+            
+                    let NewExpiryDateSubLane5Pilot1 = addMonthsToDateSubLane5Pilot1(LastCheckSubLane5Pilot1, validitySubLane5Pilot1);
+                    document.getElementById("newExpiryDateSubLane5Pilot1").innerText = NewExpiryDateSubLane5Pilot1.toLocaleDateString();
+            
+                    const remainingTimeSubLane5Pilot1 = NewExpiryDateSubLane5Pilot1 - currentDate;
+                    const remainingDaysSubLane5Pilot1 = Math.floor(remainingTimeSubLane5Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysSubLane5Pilot1").innerText = remainingDaysSubLane5Pilot1;
+                    if (remainingDaysSubLane5Pilot1 < 60 && !document.getElementById("emailSentSubLane5Pilot1").checked) {
+                      const recipient = 'alexander.campbell@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com'; 
+                      const subject = 'Automated Email - EPC license';
+                      const body = 'Your EPC is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentSubLane5Pilot1").checked = true;
+                    }
+
+// SubLane5 Pilot1 --------Ende---------------------------------------------
+
+
+// SubLane6 Pilot1 --------Anfang---------------------------------------------
+
+                    let ValidityStringSubLane6Pilot1 = document.getElementById("validitySubLane6Pilot1").innerText;
+                    let validitySubLane6Pilot1 = +ValidityStringSubLane6Pilot1;
+           
+                    function addMonthsToDateSubLane6Pilot1(date, months) {
+                        let newDateSubLane6Pilot1 = new Date(document.getElementById("lastCheckSubLane6Pilot1").innerText);
+                        newDateSubLane6Pilot1.setMonth(newDateSubLane6Pilot1.getMonth() + months);
+                        return newDateSubLane6Pilot1;
+                    }
+
+                    let LastCheckSubLane6Pilot1 = new Date(document.getElementById("lastCheckSubLane6Pilot1").innerText);
+            
+                    let NewExpiryDateSubLane6Pilot1 = addMonthsToDateSubLane6Pilot1(LastCheckSubLane6Pilot1, validitySubLane6Pilot1);
+                    document.getElementById("newExpiryDateSubLane6Pilot1").innerText = NewExpiryDateSubLane6Pilot1.toLocaleDateString();
+            
+                    const remainingTimeSubLane6Pilot1 = NewExpiryDateSubLane6Pilot1 - currentDate;
+                    const remainingDaysSubLane6Pilot1 = Math.floor(remainingTimeSubLane6Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysSubLane6Pilot1").innerText = remainingDaysSubLane6Pilot1;
+                    if (remainingDaysSubLane6Pilot1 < 60 && !document.getElementById("emailSentSubLane6Pilot1").checked) {
+                      const recipient = 'alexander.campbell@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - FER PDP license';
+                      const body = 'Your FER PDP is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentSubLane6Pilot1").checked = true;
+                    }
+
+// SubLane6 Pilot1 --------Ende---------------------------------------------   
+
+
+// SubLane7 Pilot1 --------Anfang---------------------------------------------
+
+                    let ValidityStringSubLane7Pilot1 = document.getElementById("validitySubLane7Pilot1").innerText;
+                    let validitySubLane7Pilot1 = +ValidityStringSubLane7Pilot1;
+                        
+                    function addMonthsToDateSubLane7Pilot1(date, months) {
+                        let newDateSubLane7Pilot1 = new Date(document.getElementById("lastCheckSubLane7Pilot1").innerText);
+                        newDateSubLane7Pilot1.setMonth(newDateSubLane7Pilot1.getMonth() + months);
+                        return newDateSubLane7Pilot1;
+                    }
+
+                    let LastCheckSubLane7Pilot1 = new Date(document.getElementById("lastCheckSubLane7Pilot1").innerText);
+            
+                    let NewExpiryDateSubLane7Pilot1 = addMonthsToDateSubLane7Pilot1(LastCheckSubLane7Pilot1, validitySubLane7Pilot1);
+                    document.getElementById("newExpiryDateSubLane7Pilot1").innerText = NewExpiryDateSubLane7Pilot1.toLocaleDateString();
+        
+                    const remainingTimeSubLane7Pilot1 = NewExpiryDateSubLane7Pilot1 - currentDate;
+                    const remainingDaysSubLane7Pilot1 = Math.floor(remainingTimeSubLane7Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysSubLane7Pilot1").innerText = remainingDaysSubLane7Pilot1;
+                    if (remainingDaysSubLane7Pilot1 < 60 && !document.getElementById("emailSentSubLane7Pilot1").checked) {
+                      const recipient = 'alexander.campbell@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - FFS currency license';
+                      const body = 'Your FFS currency is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentSubLane7Pilot1").checked = true;
+                    }
+
+// SubLane7 Pilot1 --------Ende---------------------------------------------
+
+
+// SubLane8 Pilot1 --------Anfang---------------------------------------------
+
+                    let ValidityStringSubLane8Pilot1 = document.getElementById("validitySubLane8Pilot1").innerText;
+                    let validitySubLane8Pilot1 = +ValidityStringSubLane8Pilot1;
+    
+                    function addMonthsToDateSubLane8Pilot1(date, months) {
+                        let newDateSubLane8Pilot1 = new Date(document.getElementById("lastCheckSubLane8Pilot1").innerText);
+                        newDateSubLane8Pilot1.setMonth(newDateSubLane8Pilot1.getMonth() + months);
+                        return newDateSubLane8Pilot1;
+                    }
+
+                    let LastCheckSubLane8Pilot1 = new Date(document.getElementById("lastCheckSubLane8Pilot1").innerText);
+            
+                    let NewExpiryDateSubLane8Pilot1 = addMonthsToDateSubLane8Pilot1(LastCheckSubLane8Pilot1, validitySubLane8Pilot1);
+                    document.getElementById("newExpiryDateSubLane8Pilot1").innerText = NewExpiryDateSubLane8Pilot1.toLocaleDateString();
+      
+                    const remainingTimeSubLane8Pilot1 = NewExpiryDateSubLane8Pilot1 - currentDate;
+                    const remainingDaysSubLane8Pilot1 = Math.floor(remainingTimeSubLane8Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysSubLane8Pilot1").innerText = remainingDaysSubLane8Pilot1;
+                    if (remainingDaysSubLane8Pilot1 < 60 && !document.getElementById("emailSentSubLane8Pilot1").checked) {
+                      const recipient = 'alexander.campbell@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - IPPM license';
+                      const body = 'Your IPPM is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentSubLane8Pilot1").checked = true;
+                    }
+
+// SubLane8 Pilot1 --------Ende---------------------------------------------
+
+// SubLane9 Pilot1 --------Anfang---------------------------------------------
+
+let ValidityStringSubLane9Pilot1 = document.getElementById("validitySubLane9Pilot1").innerText;
+                    let validitySubLane9Pilot1 = +ValidityStringSubLane9Pilot1;
+
+                    function addMonthsToDateSubLane9Pilot1(date, months) {
+                        let newDateSubLane9Pilot1 = new Date(document.getElementById("lastCheckSubLane9Pilot1").innerText);
+                        newDateSubLane9Pilot1.setMonth(newDateSubLane9Pilot1.getMonth() + months);
+                        return newDateSubLane9Pilot1;
+                    }
+
+                    let LastCheckSubLane9Pilot1 = new Date(document.getElementById("lastCheckSubLane9Pilot1").innerText);
+            
+                    let NewExpiryDateSubLane9Pilot1 = addMonthsToDateSubLane9Pilot1(LastCheckSubLane9Pilot1, validitySubLane9Pilot1);
+                    document.getElementById("newExpiryDateSubLane9Pilot1").innerText = NewExpiryDateSubLane9Pilot1.toLocaleDateString();
+           
+                    const remainingTimeSubLane9Pilot1 = NewExpiryDateSubLane9Pilot1 - currentDate;
+                    const remainingDaysSubLane9Pilot1 = Math.floor(remainingTimeSubLane9Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysSubLane9Pilot1").innerText = remainingDaysSubLane9Pilot1;
+                    if (remainingDaysSubLane9Pilot1 < 60 && !document.getElementById("emailSentSubLane9Pilot1").checked) {
+                      const recipient = 'alexander.campbell@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - IPC license';
+                      const body = 'Your IPC is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentSubLane9Pilot1").checked = true;
+                    }
+
+// SubLane9 Pilot1 --------Ende---------------------------------------------
+
+// SubLane10 Pilot1 --------Anfang---------------------------------------------
+
+let ValidityStringSubLane10Pilot1 = document.getElementById("validitySubLane10Pilot1").innerText;
+                    let validitySubLane10Pilot1 = +ValidityStringSubLane10Pilot1;
+
+                    function addMonthsToDateSubLane10Pilot1(date, months) {
+                        let newDateSubLane10Pilot1 = new Date(document.getElementById("lastCheckSubLane10Pilot1").innerText);
+                        newDateSubLane10Pilot1.setMonth(newDateSubLane10Pilot1.getMonth() + months);
+                        return newDateSubLane10Pilot1;
+                    }
+
+                    let LastCheckSubLane10Pilot1 = new Date(document.getElementById("lastCheckSubLane10Pilot1").innerText);
+            
+                    let NewExpiryDateSubLane10Pilot1 = addMonthsToDateSubLane10Pilot1(LastCheckSubLane10Pilot1, validitySubLane10Pilot1);
+                    document.getElementById("newExpiryDateSubLane10Pilot1").innerText = NewExpiryDateSubLane10Pilot1.toLocaleDateString();
+           
+                    const remainingTimeSubLane10Pilot1 = NewExpiryDateSubLane10Pilot1 - currentDate;
+                    const remainingDaysSubLane10Pilot1 = Math.floor(remainingTimeSubLane10Pilot1 / (1000 * 60 * 60 * 24));
+                    document.getElementById("remDaysSubLane10Pilot1").innerText = remainingDaysSubLane10Pilot1;
+                    if (remainingDaysSubLane10Pilot1 < 60 && !document.getElementById("emailSentSubLane10Pilot1").checked) {
+                      const recipient = 'alexander.campbell@cae.com';
+                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
+                      const subject = 'Automated Email - IPC license';
+                      const body = 'Your IPC is going to expire. Please contact Plato.';
+
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      window.location.href = mailtoLink;
+
+                      document.getElementById("emailSentSubLane10Pilot1").checked = true;
+                    }
+
+// SubLane10 Pilot1 --------Ende---------------------------------------------
+
+
+// PILOT 2
+
+
+
+
+const NameTablePilot2 = "Pilot Name 2";
+      const LicenseNameTablePilot2 = "123456789";
+      document.querySelector("#headPilot2").innerText = `${NameTablePilot2}  / License No.: ${LicenseNameTablePilot2}`;
+      document.querySelector("#headSubPilot2").innerText = `${NameTablePilot2}  / License No.: ${LicenseNameTablePilot2}`;
+
+
+  }, 100); // 100ms warten, damit `loadTableData()` zuerst läuft
+            
+          };
+  
+
+
+
+</script>
+
+</body>
+</html>
+
+
+
