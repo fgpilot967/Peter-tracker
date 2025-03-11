@@ -99,11 +99,7 @@ table {
       border-color: brown;
       color: black;
       text-align: center;
-      padding: 6px;
-    }
-
-    td {
-      width: 100px;
+      padding: 8px;
     }
 
     .grey {
@@ -174,7 +170,7 @@ table {
         <div>
           <table id="editableTablePilot1">
             <tr>
-              <th colspan="6" id="headPilot1"></th>
+              <th colspan="8" id="headPilot1"></th>
             </tr>
         
             <tr>
@@ -183,127 +179,157 @@ table {
               <th>Validity</th>
               <th>Expiry Date</th>
               <th>rem. Days</th>
-              <th>Email sent</th>
+              <th colspan="3" id="emailSent">Email sent</th>
             </tr>
             <tr>
-              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="green" id="LiLane1Pilot1" style="width: 180px;"></td>
               <td contenteditable="true" class="grey" id="lastCheckLiLane1Pilot1"></td>
-              <td contenteditable="true" class="grey" id="validityLiLane1Pilot1"></td>
+              <td contenteditable="true" class="grey" id="validityLiLane1Pilot1" style="width: 40px;"></td>
               <td id="newExpiryDateLiLane1Pilot1">''</td>
-              <td id="remDaysLiLane1Pilot1"></td>
-              <td ><input type="checkbox" value="sent" id="emailSentLiLane1Pilot1"></td>
+              <td id="remDaysLiLane1Pilot1" class="remDays" ></td>
+              <td><input type="checkbox" value="sent" id="emailSent30LiLane1Pilot1">30</td>
+              <td><input type="checkbox" value="sent" id="emailSent60LiLane1Pilot1">60</td>
+              <td><input type="checkbox" value="sent" id="emailSent90LiLane1Pilot1">90</td>
             </tr>
             <tr>
-              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="green" id="LiLane2Pilot1"></td>
               <td contenteditable="true" class="grey" id="lastCheckLiLane2Pilot1"></td>
               <td contenteditable="true" class="grey" id="validityLiLane2Pilot1"></td>
               <td id="newExpiryDateLiLane2Pilot1"></td>
               <td id="remDaysLiLane2Pilot1"></td>
-              <td ><input type="checkbox" value="sent" id="emailSentLiLane2Pilot1"></td>
+              <td><input type="checkbox" value="sent" id="emailSent30LiLane2Pilot1">30</td>
+              <td><input type="checkbox" value="sent" id="emailSent60LiLane2Pilot1">60</td>
+              <td><input type="checkbox" value="sent" id="emailSent90LiLane2Pilot1">90</td>
             </tr>
             <tr>
-              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="green" id="LiLane3Pilot1"></td>
               <td contenteditable="true" class="grey" id="lastCheckLiLane3Pilot1"></td>
               <td contenteditable="true" class="grey" id="validityLiLane3Pilot1"></td>
               <td id="newExpiryDateLiLane3Pilot1"></td>
               <td id="remDaysLiLane3Pilot1"></td>
-              <td ><input type="checkbox" value="sent" id="emailSentLiLane3Pilot1"></td>
+              <td><input type="checkbox" value="sent" id="emailSent30LiLane3Pilot1">30</td>
+              <td><input type="checkbox" value="sent" id="emailSent60LiLane3Pilot1">60</td>
+              <td><input type="checkbox" value="sent" id="emailSent90LiLane3Pilot1">90</td>
             </tr>
             <tr>
-              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="green" id="LiLane4Pilot1"></td>
               <td contenteditable="true" class="grey" id="lastCheckLiLane4Pilot1"></td>
               <td contenteditable="true" class="grey" id="validityLiLane4Pilot1"></td>
               <td id="newExpiryDateLiLane4Pilot1">30 NOV 2025</td>
               <td id="remDaysLiLane4Pilot1"></td>
-              <td ><input type="checkbox" value="sent" id="emailSentLiLane4Pilot1"></td>
+              <td><input type="checkbox" value="sent" id="emailSent30LiLane4Pilot1">30</td>
+              <td><input type="checkbox" value="sent" id="emailSent60LiLane4Pilot1">60</td>
+              <td><input type="checkbox" value="sent" id="emailSent90LiLane4Pilot1">90</td>
             </tr>
             <tr>
-              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="green" id="LiLane5Pilot1"></td>
               <td contenteditable="true" class="grey" id="lastCheckLiLane5Pilot1"></td>
               <td contenteditable="true" class="grey" id="validityLiLane5Pilot1"></td>
               <td id="newExpiryDateLiLane5Pilot1"></td>
               <td id="remDaysLiLane5Pilot1"></td>
-              <td ><input type="checkbox" value="sent" id="emailSentLiLane5Pilot1"></td>
+              <td><input type="checkbox" value="sent" id="emailSent30LiLane5Pilot1">30</td>
+              <td><input type="checkbox" value="sent" id="emailSent60LiLane5Pilot1">60</td>
+              <td><input type="checkbox" value="sent" id="emailSent90LiLane5Pilot1">90</td>
             </tr>
             <tr>
-              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="green" id="LiLane6Pilot1"></td>
               <td contenteditable="true" class="grey" id="lastCheckLiLane6Pilot1"></td>
               <td contenteditable="true" class="grey" id="validityLiLane6Pilot1"></td>
               <td id="newExpiryDateLiLane6Pilot1"></td>
               <td id="remDaysLiLane6Pilot1"></td>
-              <td ><input type="checkbox" value="sent" id="emailSentLiLane6Pilot1"></td>
+              <td><input type="checkbox" value="sent" id="emailSent30LiLane6Pilot1">30</td>
+              <td><input type="checkbox" value="sent" id="emailSent60LiLane6Pilot1">60</td>
+              <td><input type="checkbox" value="sent" id="emailSent90LiLane6Pilot1">90</td>
             </tr>
             <tr>
-              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="green" id="LiLane7Pilot1"></td>
               <td contenteditable="true" class="grey" id="lastCheckLiLane7Pilot1"></td>
               <td contenteditable="true" class="grey" id="validityLiLane7Pilot1"></td>
               <td id="newExpiryDateLiLane7Pilot1"></td>
               <td id="remDaysLiLane7Pilot1"></td>
-              <td ><input type="checkbox" value="sent" id="emailSentLiLane7Pilot1"></td>
+              <td><input type="checkbox" value="sent" id="emailSent30LiLane7Pilot1">30</td>
+              <td><input type="checkbox" value="sent" id="emailSent60LiLane7Pilot1">60</td>
+              <td><input type="checkbox" value="sent" id="emailSent90LiLane7Pilot1">90</td>
             </tr>
             <tr>
-              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="green" id="LiLane8Pilot1"></td>
               <td contenteditable="true" class="grey" id="lastCheckLiLane8Pilot1"></td>
               <td contenteditable="true" class="grey" id="validityLiLane8Pilot1"></td>
               <td id="newExpiryDateLiLane8Pilot1"></td>
               <td id="remDaysLiLane8Pilot1"></td>
-              <td ><input type="checkbox" value="sent" id="emailSentLiLane8Pilot1"></td>
+              <td><input type="checkbox" value="sent" id="emailSent30LiLane8Pilot1">30</td>
+              <td><input type="checkbox" value="sent" id="emailSent60LiLane8Pilot1">60</td>
+              <td><input type="checkbox" value="sent" id="emailSent90LiLane8Pilot1">90</td>
             </tr>
             <tr>
-              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="green" id="LiLane9Pilot1"></td>
               <td contenteditable="true" class="grey" id="lastCheckLiLane9Pilot1"></td>
               <td contenteditable="true" class="grey" id="validityLiLane9Pilot1"></td>
               <td id="newExpiryDateLiLane9Pilot1"></td>
               <td id="remDaysLiLane9Pilot1"></td>
-              <td ><input type="checkbox" value="sent" id="emailSentLiLane9Pilot1"></td>
+              <td><input type="checkbox" value="sent" id="emailSent30LiLane9Pilot1">30</td>
+              <td><input type="checkbox" value="sent" id="emailSent60LiLane9Pilot1">60</td>
+              <td><input type="checkbox" value="sent" id="emailSent90LiLane9Pilot1">90</td>
             </tr>
             <tr>
-              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="green" id="LiLane10Pilot1"></td>
               <td contenteditable="true" class="grey" id="lastCheckLiLane10Pilot1"></td>
               <td contenteditable="true" class="grey" id="validityLiLane10Pilot1"></td>
               <td id="newExpiryDateLiLane10Pilot1"></td>
               <td id="remDaysLiLane10Pilot1"></td>
-              <td ><input type="checkbox" value="sent" id="emailSentLiLane10Pilot1"></td>
+              <td><input type="checkbox" value="sent" id="emailSent30LiLane10Pilot1">30</td>
+              <td><input type="checkbox" value="sent" id="emailSent60LiLane10Pilot1">60</td>
+              <td><input type="checkbox" value="sent" id="emailSent90LiLane10Pilot1">90</td>
             </tr>
             <tr>
-              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="green" id="LiLane11Pilot1"></td>
               <td contenteditable="true" class="grey" id="lastCheckLiLane11Pilot1"></td>
               <td contenteditable="true" class="grey" id="validityLiLane11Pilot1"></td>
               <td id="newExpiryDateLiLane11Pilot1"></td>
               <td id="remDaysLiLane11Pilot1"></td>
-              <td ><input type="checkbox" value="sent" id="emailSentLiLane11Pilot1"></td>
+              <td><input type="checkbox" value="sent" id="emailSent30LiLane11Pilot1">30</td>
+              <td><input type="checkbox" value="sent" id="emailSent60LiLane11Pilot1">60</td>
+              <td><input type="checkbox" value="sent" id="emailSent90LiLane11Pilot1">90</td>
             </tr>
             <tr>
-              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="green" id="LiLane12Pilot1"></td>
               <td contenteditable="true" class="grey" id="lastCheckLiLane12Pilot1"></td>
               <td contenteditable="true" class="grey" id="validityLiLane12Pilot1"></td>
               <td id="newExpiryDateLiLane12Pilot1"></td>
               <td id="remDaysLiLane12Pilot1"></td>
-              <td ><input type="checkbox" value="sent" id="emailSentLiLane12Pilot1"></td>
+              <td><input type="checkbox" value="sent" id="emailSent30LiLane12Pilot1">30</td>
+              <td><input type="checkbox" value="sent" id="emailSent60LiLane12Pilot1">60</td>
+              <td><input type="checkbox" value="sent" id="emailSent90LiLane12Pilot1">90</td>
             </tr>
             <tr>
-              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="green" id="LiLane13Pilot1"></td>
               <td contenteditable="true" class="grey" id="lastCheckLiLane13Pilot1"></td>
               <td contenteditable="true" class="grey" id="validityLiLane13Pilot1"></td>
               <td id="newExpiryDateLiLane13Pilot1"></td>
               <td id="remDaysLiLane13Pilot1"></td>
-              <td ><input type="checkbox" value="sent" id="emailSentLiLane13Pilot1"></td>
+              <td><input type="checkbox" value="sent" id="emailSent30LiLane13Pilot1">30</td>
+              <td><input type="checkbox" value="sent" id="emailSent60LiLane13Pilot1">60</td>
+              <td><input type="checkbox" value="sent" id="emailSent90LiLane13Pilot1">90</td>
             </tr>
             <tr>
-              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="green" id="LiLane14Pilot1"></td>
               <td contenteditable="true" class="grey" id="lastCheckLiLane14Pilot1"></td>
               <td contenteditable="true" class="grey" id="validityLiLane14Pilot1"></td>
               <td id="newExpiryDateLiLane14Pilot1"></td>
               <td id="remDaysLiLane14Pilot1"></td>
-              <td ><input type="checkbox" value="sent" id="emailSentLiLane14Pilot1"></td>
+              <td><input type="checkbox" value="sent" id="emailSent30LiLane14Pilot1">30</td>
+              <td><input type="checkbox" value="sent" id="emailSent60LiLane14Pilot1">60</td>
+              <td><input type="checkbox" value="sent" id="emailSent90LiLane14Pilot1">90</td>
             </tr>
             <tr>
-              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="green" id="LiLane15Pilot1"></td>
               <td contenteditable="true" class="grey" id="lastCheckLiLane15Pilot1"></td>
               <td contenteditable="true" class="grey" id="validityLiLane15Pilot1"></td>
               <td id="newExpiryDateLiLane15Pilot1"></td>
               <td id="remDaysLiLane15Pilot1"></td>
-              <td ><input type="checkbox" value="sent" id="emailSentLiLane15Pilot1"></td>
+              <td><input type="checkbox" value="sent" id="emailSent30LiLane15Pilot1">30</td>
+              <td><input type="checkbox" value="sent" id="emailSent60LiLane15Pilot1">60</td>
+              <td><input type="checkbox" value="sent" id="emailSent90LiLane15Pilot1">90</td>
             </tr>
 
           </table>
@@ -324,7 +350,7 @@ table {
               <th>Unlimited</th>
             </tr>
             <tr>
-              <td contenteditable="true" class="green"></td>
+              <td contenteditable="true" class="green" style="width: 180px;"></td>
               <td contenteditable="true" class="grey" id="lastCheckSubLane1Pilot1"></td>
               <td contenteditable="true" class="grey" id="validitySubLane1Pilot1"></td>
               <td id="newExpiryDateSubLane1Pilot1"></td>
@@ -667,6 +693,10 @@ table {
 
 <script>
 
+    
+
+
+
     document.querySelectorAll(".tablinks").forEach(tab => {
       tab.addEventListener("click", function () {
       sessionStorage.setItem("activeTab", this.getAttribute("onclick").match(/'([^']+)'/)[1]);
@@ -780,6 +810,22 @@ window.onload = function() {
     
     setTimeout(() => {
 
+// const für auto-Email      
+      const getLiLane1Pilot1 = document.getElementById("LiLane1Pilot1").innerText;
+      const getLiLane2Pilot1 = document.getElementById("LiLane2Pilot1").innerText;
+      const getLiLane3Pilot1 = document.getElementById("LiLane3Pilot1").innerText;
+      const getLiLane4Pilot1 = document.getElementById("LiLane4Pilot1").innerText;
+      const getLiLane5Pilot1 = document.getElementById("LiLane5Pilot1").innerText;
+      const getLiLane6Pilot1 = document.getElementById("LiLane6Pilot1").innerText;
+      const getLiLane7Pilot1 = document.getElementById("LiLane7Pilot1").innerText;
+      const getLiLane8Pilot1 = document.getElementById("LiLane8Pilot1").innerText;
+      const getLiLane9Pilot1 = document.getElementById("LiLane9Pilot1").innerText;
+      const getLiLane10Pilot1 = document.getElementById("LiLane10Pilot1").innerText;
+      const getLiLane11Pilot1 = document.getElementById("LiLane11Pilot1").innerText;
+      const getLiLane12Pilot1 = document.getElementById("LiLane12Pilot1").innerText;
+      const getLiLane13Pilot1 = document.getElementById("LiLane13Pilot1").innerText;
+      const getLiLane14Pilot1 = document.getElementById("LiLane14Pilot1").innerText;
+      const getLiLane15Pilot1 = document.getElementById("LiLane15Pilot1").innerText;
 
 
  // LiLane1 Pilot1 --------Anfang---------------------------------------------
@@ -811,11 +857,11 @@ window.onload = function() {
                     const remainingTimeLiLane1Pilot1 = NewExpiryDateLiLane1Pilot1 - currentDate;
                     const remainingDaysLiLane1Pilot1 = Math.floor(remainingTimeLiLane1Pilot1 / (1000 * 60 * 60 * 24));
                     document.getElementById("remDaysLiLane1Pilot1").innerText = remainingDaysLiLane1Pilot1;
-                    if (remainingDaysLiLane1Pilot1 < 60 && !document.getElementById("emailSentLiLane1Pilot1").checked) {
-                      const recipient = 'mark.Pilot1@cae.com';
-                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
-                      const subject = 'Automated Email - ATPL license';
-                      const body = 'Your ATPL is going to expire. Please contact Plato.';
+                    if (remainingDaysLiLane1Pilot1 <= 30 && !document.getElementById("emailSent30LiLane1Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane1Pilot1} license`;
+                      const body = `Your ${getLiLane1Pilot1} is going to expire. 30 Days left. Please contact xxx.`;
 
                       // Korrekte Mailto-URL mit CC
                       const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -824,7 +870,35 @@ window.onload = function() {
                       window.location.href = mailtoLink;
 
                       // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
-                      document.getElementById("emailSentLiLane1Pilot1").checked = true;
+                      document.getElementById("emailSent30LiLane1Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 60 && !document.getElementById("emailSent60LiLane1Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane1Pilot1} license`;
+                      const body = `Your ${getLiLane1Pilot1} is going to expire. 60 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent60LiLane1Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 90 && !document.getElementById("emailSent90LiLane1Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane1Pilot1} license`;
+                      const body = `Your ${getLiLane1Pilot1} is going to expire. 90 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent90LiLane1Pilot1").checked = true;
                     }
 
 // LiLane1 Pilot1 --------Ende---------------------------------------------
@@ -849,17 +923,48 @@ window.onload = function() {
                     const remainingTimeLiLane2Pilot1 = NewExpiryDateLiLane2Pilot1 - currentDate;
                     const remainingDaysLiLane2Pilot1 = Math.floor(remainingTimeLiLane2Pilot1 / (1000 * 60 * 60 * 24));
                     document.getElementById("remDaysLiLane2Pilot1").innerText = remainingDaysLiLane2Pilot1;
-                    if (remainingDaysLiLane2Pilot1 < 60 && !document.getElementById("emailSentLiLane2Pilot1").checked) {
-                      const recipient = 'mark.Pilot1@cae.com';
-                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
-                      const subject = 'Automated Email - LiLane2 license';
-                      const body = 'Your LiLane2 is going to expire. Please contact Plato.';
+                    if (remainingDaysLiLane1Pilot1 <= 30 && !document.getElementById("emailSent30LiLane2Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane2Pilot1} license`;
+                      const body = `Your ${getLiLane2Pilot1} is going to expire. 30 Days left. Please contact xxx.`;
 
+                      // Korrekte Mailto-URL mit CC
                       const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
                       window.location.href = mailtoLink;
 
-                      document.getElementById("emailSentLiLane2Pilot1").checked = true;
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent30LiLane2Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 60 && !document.getElementById("emailSent60LiLane2Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane2Pilot1} license`;
+                      const body = `Your ${getLiLane2Pilot1} is going to expire. 60 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent60LiLane2Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 90 && !document.getElementById("emailSent90LiLane2Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane2Pilot1} license`;
+                      const body = `Your ${getLiLane2Pilot1} is going to expire. 90 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent90LiLane2Pilot1").checked = true;
                     }
 
 // LiLane2 Pilot1 --------Ende---------------------------------------------
@@ -884,17 +989,48 @@ window.onload = function() {
                     const remainingTimeLiLane3Pilot1 = NewExpiryDateLiLane3Pilot1 - currentDate;
                     const remainingDaysLiLane3Pilot1 = Math.floor(remainingTimeLiLane3Pilot1 / (1000 * 60 * 60 * 24));
                     document.getElementById("remDaysLiLane3Pilot1").innerText = remainingDaysLiLane3Pilot1;
-                    if (remainingDaysLiLane3Pilot1 < 60 && !document.getElementById("emailSentLiLane3Pilot1").checked) {
-                      const recipient = 'mark.Pilot1@cae.com';
-                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
-                      const subject = 'Automated Email - CASA LiLane3 license';
-                      const body = 'Your CASA LiLane3 is going to expire. Please contact Plato.';
+                    if (remainingDaysLiLane1Pilot1 <= 30 && !document.getElementById("emailSent30LiLane3Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane3Pilot1} license`;
+                      const body = `Your ${getLiLane3Pilot1} is going to expire. 30 Days left. Please contact xxx.`;
 
+                      // Korrekte Mailto-URL mit CC
                       const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
                       window.location.href = mailtoLink;
 
-                      document.getElementById("emailSentLiLane3Pilot1").checked = true;
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent30LiLane3Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 60 && !document.getElementById("emailSent60LiLane3Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane3Pilot1} license`;
+                      const body = `Your ${getLiLane3Pilot1} is going to expire. 60 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent60LiLane3Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 90 && !document.getElementById("emailSent90LiLane3Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane3Pilot1} license`;
+                      const body = `Your ${getLiLane3Pilot1} is going to expire. 90 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent90LiLane3Pilot1").checked = true;
                     }
 
 // LiLane3 Pilot1 --------Ende---------------------------------------------   
@@ -919,17 +1055,48 @@ window.onload = function() {
                     const remainingTimeLiLane4Pilot1 = NewExpiryDateLiLane4Pilot1 - currentDate;
                     const remainingDaysLiLane4Pilot1 = Math.floor(remainingTimeLiLane4Pilot1 / (1000 * 60 * 60 * 24));
                     document.getElementById("remDaysLiLane4Pilot1").innerText = remainingDaysLiLane4Pilot1;
-                    if (remainingDaysLiLane4Pilot1 < 60 && !document.getElementById("emailSentLiLane4Pilot1").checked) {
-                      const recipient = 'mark.Pilot1@cae.com';
-                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
-                      const subject = 'Automated Email - S & P license';
-                      const body = 'Your S & P is going to expire. Please contact Plato.';
+                    if (remainingDaysLiLane1Pilot1 <= 30 && !document.getElementById("emailSent30LiLane4Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane4Pilot1} license`;
+                      const body = `Your ${getLiLane4Pilot1} is going to expire. 30 Days left. Please contact xxx.`;
 
+                      // Korrekte Mailto-URL mit CC
                       const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
                       window.location.href = mailtoLink;
 
-                      document.getElementById("emailSentLiLane4Pilot1").checked = true;
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent30LiLane4Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 60 && !document.getElementById("emailSent60LiLane4Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane4Pilot1} license`;
+                      const body = `Your ${getLiLane4Pilot1} is going to expire. 60 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent60LiLane4Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 90 && !document.getElementById("emailSent90LiLane4Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane4Pilot1} license`;
+                      const body = `Your ${getLiLane4Pilot1} is going to expire. 90 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent90LiLane4Pilot1").checked = true;
                     }
 
 // S&P Pilot1 --------Ende---------------------------------------------
@@ -954,17 +1121,48 @@ window.onload = function() {
                     const remainingTimeLiLane5Pilot1 = NewExpiryDateLiLane5Pilot1 - currentDate;
                     const remainingDaysLiLane5Pilot1 = Math.floor(remainingTimeLiLane5Pilot1 / (1000 * 60 * 60 * 24));
                     document.getElementById("remDaysLiLane5Pilot1").innerText = remainingDaysLiLane5Pilot1;
-                    if (remainingDaysLiLane5Pilot1 < 60 && !document.getElementById("emailSentLiLane5Pilot1").checked) {
-                      const recipient = 'mark.Pilot1@cae.com';
-                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
-                      const subject = 'Automated Email - LiLane5 license';
-                      const body = 'Your LiLane5 is going to expire. Please contact Plato.';
+                    if (remainingDaysLiLane1Pilot1 <= 30 && !document.getElementById("emailSent30LiLane5Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane5Pilot1} license`;
+                      const body = `Your ${getLiLane5Pilot1} is going to expire. 30 Days left. Please contact xxx.`;
 
+                      // Korrekte Mailto-URL mit CC
                       const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
                       window.location.href = mailtoLink;
 
-                      document.getElementById("emailSentLiLane5Pilot1").checked = true;
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent30LiLane5Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 60 && !document.getElementById("emailSent60LiLane5Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane5Pilot1} license`;
+                      const body = `Your ${getLiLane5Pilot1} is going to expire. 60 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent60LiLane5Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 90 && !document.getElementById("emailSent90LiLane5Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane5Pilot1} license`;
+                      const body = `Your ${getLiLane5Pilot1} is going to expire. 90 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent90LiLane5Pilot1").checked = true;
                     }
 
 // LiLane5 Pilot1 --------Ende---------------------------------------------
@@ -990,17 +1188,48 @@ window.onload = function() {
                     const remainingTimeLiLane6Pilot1 = NewExpiryDateLiLane6Pilot1 - currentDate;
                     const remainingDaysLiLane6Pilot1 = Math.floor(remainingTimeLiLane6Pilot1 / (1000 * 60 * 60 * 24));
                     document.getElementById("remDaysLiLane6Pilot1").innerText = remainingDaysLiLane6Pilot1;
-                    if (remainingDaysLiLane6Pilot1 < 60 && !document.getElementById("emailSentLiLane6Pilot1").checked) {
-                      const recipient = 'mark.Pilot1@cae.com';
-                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
-                      const subject = 'Automated Email - FER PDP license';
-                      const body = 'Your FER PDP is going to expire. Please contact Plato.';
+                    if (remainingDaysLiLane1Pilot1 <= 30 && !document.getElementById("emailSent30LiLane6Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane6Pilot1} license`;
+                      const body = `Your ${getLiLane6Pilot1} is going to expire. 30 Days left. Please contact xxx.`;
 
+                      // Korrekte Mailto-URL mit CC
                       const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
                       window.location.href = mailtoLink;
 
-                      document.getElementById("emailSentLiLane6Pilot1").checked = true;
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent30LiLane6Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 60 && !document.getElementById("emailSent60LiLane6Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane6Pilot1} license`;
+                      const body = `Your ${getLiLane6Pilot1} is going to expire. 60 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent60LiLane6Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 90 && !document.getElementById("emailSent90LiLane6Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane6Pilot1} license`;
+                      const body = `Your ${getLiLane6Pilot1} is going to expire. 90 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent90LiLane6Pilot1").checked = true;
                     }
 
 // LiLane6 Pilot1 --------Ende---------------------------------------------   
@@ -1025,17 +1254,48 @@ window.onload = function() {
                     const remainingTimeLiLane7Pilot1 = NewExpiryDateLiLane7Pilot1 - currentDate;
                     const remainingDaysLiLane7Pilot1 = Math.floor(remainingTimeLiLane7Pilot1 / (1000 * 60 * 60 * 24));
                     document.getElementById("remDaysLiLane7Pilot1").innerText = remainingDaysLiLane7Pilot1;
-                    if (remainingDaysLiLane7Pilot1 < 60 && !document.getElementById("emailSentLiLane7Pilot1").checked) {
-                      const recipient = 'mark.Pilot1@cae.com';
-                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
-                      const subject = 'Automated Email - LiLane7 currency license';
-                      const body = 'Your LiLane7 currency is going to expire. Please contact Plato.';
+                    if (remainingDaysLiLane1Pilot1 <= 30 && !document.getElementById("emailSent30LiLane7Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane7Pilot1} license`;
+                      const body = `Your ${getLiLane7Pilot1} is going to expire. 30 Days left. Please contact xxx.`;
 
+                      // Korrekte Mailto-URL mit CC
                       const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
                       window.location.href = mailtoLink;
 
-                      document.getElementById("emailSentLiLane7Pilot1").checked = true;
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent30LiLane7Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 60 && !document.getElementById("emailSent60LiLane7Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane7Pilot1} license`;
+                      const body = `Your ${getLiLane7Pilot1} is going to expire. 60 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent60LiLane7Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 90 && !document.getElementById("emailSent90LiLane7Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane7Pilot1} license`;
+                      const body = `Your ${getLiLane7Pilot1} is going to expire. 90 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent90LiLane7Pilot1").checked = true;
                     }
 
 // LiLane7 Pilot1 --------Ende---------------------------------------------
@@ -1060,17 +1320,48 @@ window.onload = function() {
                     const remainingTimeLiLane8Pilot1 = NewExpiryDateLiLane8Pilot1 - currentDate;
                     const remainingDaysLiLane8Pilot1 = Math.floor(remainingTimeLiLane8Pilot1 / (1000 * 60 * 60 * 24));
                     document.getElementById("remDaysLiLane8Pilot1").innerText = remainingDaysLiLane8Pilot1;
-                    if (remainingDaysLiLane8Pilot1 < 60 && !document.getElementById("emailSentLiLane8Pilot1").checked) {
-                      const recipient = 'mark.Pilot1@cae.com';
-                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
-                      const subject = 'Automated Email - LiLane8 license';
-                      const body = 'Your LiLane8 is going to expire. Please contact Plato.';
+                    if (remainingDaysLiLane1Pilot1 <= 30 && !document.getElementById("emailSent30LiLane8Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane8Pilot1} license`;
+                      const body = `Your ${getLiLane8Pilot1} is going to expire. 30 Days left. Please contact xxx.`;
 
+                      // Korrekte Mailto-URL mit CC
                       const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
                       window.location.href = mailtoLink;
 
-                      document.getElementById("emailSentLiLane8Pilot1").checked = true;
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent30LiLane8Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 60 && !document.getElementById("emailSent60LiLane8Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane8Pilot1} license`;
+                      const body = `Your ${getLiLane8Pilot1} is going to expire. 60 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent60LiLane8Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 90 && !document.getElementById("emailSent90LiLane8Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane8Pilot1} license`;
+                      const body = `Your ${getLiLane8Pilot1} is going to expire. 90 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent90LiLane8Pilot1").checked = true;
                     }
 
 // LiLane8 Pilot1 --------Ende---------------------------------------------
@@ -1093,17 +1384,48 @@ let ValidityStringLiLane9Pilot1 = document.getElementById("validityLiLane9Pilot1
                     const remainingTimeLiLane9Pilot1 = NewExpiryDateLiLane9Pilot1 - currentDate;
                     const remainingDaysLiLane9Pilot1 = Math.floor(remainingTimeLiLane9Pilot1 / (1000 * 60 * 60 * 24));
                     document.getElementById("remDaysLiLane9Pilot1").innerText = remainingDaysLiLane9Pilot1;
-                    if (remainingDaysLiLane9Pilot1 < 60 && !document.getElementById("emailSentLiLane9Pilot1").checked) {
-                      const recipient = 'mark.Pilot1@cae.com';
-                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
-                      const subject = 'Automated Email - LiLane9 license';
-                      const body = 'Your LiLane9 is going to expire. Please contact Plato.';
+                    if (remainingDaysLiLane1Pilot1 <= 30 && !document.getElementById("emailSent30LiLane9Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane9Pilot1} license`;
+                      const body = `Your ${getLiLane9Pilot1} is going to expire. 30 Days left. Please contact xxx.`;
 
+                      // Korrekte Mailto-URL mit CC
                       const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
                       window.location.href = mailtoLink;
 
-                      document.getElementById("emailSentLiLane9Pilot1").checked = true;
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent30LiLane9Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 60 && !document.getElementById("emailSent60LiLane9Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane9Pilot1} license`;
+                      const body = `Your ${getLiLane9Pilot1} is going to expire. 60 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent60LiLane9Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 90 && !document.getElementById("emailSent90LiLane9Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane9Pilot1} license`;
+                      const body = `Your ${getLiLane9Pilot1} is going to expire. 90 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent90LiLane9Pilot1").checked = true;
                     }
 
 // LiLane9 Pilot1 --------Ende---------------------------------------------
@@ -1126,17 +1448,48 @@ let ValidityStringLiLane10Pilot1 = document.getElementById("validityLiLane10Pilo
                     const remainingTimeLiLane10Pilot1 = NewExpiryDateLiLane10Pilot1 - currentDate;
                     const remainingDaysLiLane10Pilot1 = Math.floor(remainingTimeLiLane10Pilot1 / (1000 * 60 * 60 * 24));
                     document.getElementById("remDaysLiLane10Pilot1").innerText = remainingDaysLiLane10Pilot1;
-                    if (remainingDaysLiLane10Pilot1 < 60 && !document.getElementById("emailSentLiLane10Pilot1").checked) {
-                      const recipient = 'mark.Pilot1@cae.com';
-                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
-                      const subject = 'Automated Email - LiLane10 license';
-                      const body = 'Your LiLane10 is going to expire. Please contact Plato.';
+                    if (remainingDaysLiLane1Pilot1 <= 30 && !document.getElementById("emailSent30LiLane10Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane10Pilot1} license`;
+                      const body = `Your ${getLiLane10Pilot1} is going to expire. 30 Days left. Please contact xxx.`;
 
+                      // Korrekte Mailto-URL mit CC
                       const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
                       window.location.href = mailtoLink;
 
-                      document.getElementById("emailSentLiLane10Pilot1").checked = true;
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent30LiLane10Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 60 && !document.getElementById("emailSent60LiLane10Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane10Pilot1} license`;
+                      const body = `Your ${getLiLane10Pilot1} is going to expire. 60 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent60LiLane10Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 90 && !document.getElementById("emailSent90LiLane10Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane10Pilot1} license`;
+                      const body = `Your ${getLiLane10Pilot1} is going to expire. 90 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent90LiLane10Pilot1").checked = true;
                     }
 
 // LiLane10 Pilot1 --------Ende---------------------------------------------
@@ -1159,17 +1512,48 @@ let ValidityStringLiLane11Pilot1 = document.getElementById("validityLiLane11Pilo
                     const remainingTimeLiLane11Pilot1 = NewExpiryDateLiLane11Pilot1 - currentDate;
                     const remainingDaysLiLane11Pilot1 = Math.floor(remainingTimeLiLane11Pilot1 / (1000 * 60 * 60 * 24));
                     document.getElementById("remDaysLiLane11Pilot1").innerText = remainingDaysLiLane11Pilot1;
-                    if (remainingDaysLiLane11Pilot1 < 60 && !document.getElementById("emailSentLiLane11Pilot1").checked) {
-                      const recipient = 'mark.Pilot1@cae.com';
-                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
-                      const subject = 'Automated Email - LiLane11 license';
-                      const body = 'Your LiLane11 is going to expire. Please contact Plato.';
+                    if (remainingDaysLiLane1Pilot1 <= 30 && !document.getElementById("emailSent30LiLane11Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane11Pilot1} license`;
+                      const body = `Your ${getLiLane11Pilot1} is going to expire. 30 Days left. Please contact xxx.`;
 
+                      // Korrekte Mailto-URL mit CC
                       const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
                       window.location.href = mailtoLink;
 
-                      document.getElementById("emailSentLiLane11Pilot1").checked = true;
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent30LiLane11Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 60 && !document.getElementById("emailSent60LiLane11Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane11Pilot1} license`;
+                      const body = `Your ${getLiLane11Pilot1} is going to expire. 60 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent60LiLane11Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 90 && !document.getElementById("emailSent90LiLane11Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane11Pilot1} license`;
+                      const body = `Your ${getLiLane11Pilot1} is going to expire. 90 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent90LiLane11Pilot1").checked = true;
                     }
 
 // LiLane11 Pilot1 --------Ende---------------------------------------------
@@ -1192,17 +1576,48 @@ let ValidityStringLiLane12Pilot1 = document.getElementById("validityLiLane12Pilo
                     const remainingTimeLiLane12Pilot1 = NewExpiryDateLiLane12Pilot1 - currentDate;
                     const remainingDaysLiLane12Pilot1 = Math.floor(remainingTimeLiLane12Pilot1 / (1000 * 60 * 60 * 24));
                     document.getElementById("remDaysLiLane12Pilot1").innerText = remainingDaysLiLane12Pilot1;
-                    if (remainingDaysLiLane12Pilot1 < 60 && !document.getElementById("emailSentLiLane12Pilot1").checked) {
-                      const recipient = 'mark.Pilot1@cae.com';
-                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
-                      const subject = 'Automated Email - LiLane12 license';
-                      const body = 'Your LiLane12 is going to expire. Please contact Plato.';
+                    if (remainingDaysLiLane1Pilot1 <= 30 && !document.getElementById("emailSent30LiLane12Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane12Pilot1} license`;
+                      const body = `Your ${getLiLane12Pilot1} is going to expire. 30 Days left. Please contact xxx.`;
 
+                      // Korrekte Mailto-URL mit CC
                       const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
                       window.location.href = mailtoLink;
 
-                      document.getElementById("emailSentLiLane12Pilot1").checked = true;
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent30LiLane12Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 60 && !document.getElementById("emailSent60LiLane12Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane12Pilot1} license`;
+                      const body = `Your ${getLiLane12Pilot1} is going to expire. 60 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent60LiLane12Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 90 && !document.getElementById("emailSent90LiLane12Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane12Pilot1} license`;
+                      const body = `Your ${getLiLane12Pilot1} is going to expire. 90 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent90LiLane12Pilot1").checked = true;
                     }
 
 // LiLane12 Pilot1 --------Ende---------------------------------------------
@@ -1225,17 +1640,48 @@ let ValidityStringLiLane13Pilot1 = document.getElementById("validityLiLane13Pilo
                     const remainingTimeLiLane13Pilot1 = NewExpiryDateLiLane13Pilot1 - currentDate;
                     const remainingDaysLiLane13Pilot1 = Math.floor(remainingTimeLiLane13Pilot1 / (1000 * 60 * 60 * 24));
                     document.getElementById("remDaysLiLane13Pilot1").innerText = remainingDaysLiLane13Pilot1;
-                    if (remainingDaysLiLane13Pilot1 < 60 && !document.getElementById("emailSentLiLane13Pilot1").checked) {
-                      const recipient = 'mark.Pilot1@cae.com';
-                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
-                      const subject = 'Automated Email - LiLane13 license';
-                      const body = 'Your LiLane13 is going to expire. Please contact Plato.';
+                    if (remainingDaysLiLane1Pilot1 <= 30 && !document.getElementById("emailSent30LiLane13Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane13Pilot1} license`;
+                      const body = `Your ${getLiLane13Pilot1} is going to expire. 30 Days left. Please contact xxx.`;
 
+                      // Korrekte Mailto-URL mit CC
                       const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
                       window.location.href = mailtoLink;
 
-                      document.getElementById("emailSentLiLane13Pilot1").checked = true;
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent30LiLane13Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 60 && !document.getElementById("emailSent60LiLane13Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane13Pilot1} license`;
+                      const body = `Your ${getLiLane13Pilot1} is going to expire. 60 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent60LiLane13Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 90 && !document.getElementById("emailSent90LiLane13Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane13Pilot1} license`;
+                      const body = `Your ${getLiLane13Pilot1} is going to expire. 90 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent90LiLane13Pilot1").checked = true;
                     }
 
 // LiLane13 Pilot1 --------Ende---------------------------------------------
@@ -1258,22 +1704,53 @@ let ValidityStringLiLane14Pilot1 = document.getElementById("validityLiLane14Pilo
                     const remainingTimeLiLane14Pilot1 = NewExpiryDateLiLane14Pilot1 - currentDate;
                     const remainingDaysLiLane14Pilot1 = Math.floor(remainingTimeLiLane14Pilot1 / (1000 * 60 * 60 * 24));
                     document.getElementById("remDaysLiLane14Pilot1").innerText = remainingDaysLiLane14Pilot1;
-                    if (remainingDaysLiLane14Pilot1 < 60 && !document.getElementById("emailSentLiLane14Pilot1").checked) {
-                      const recipient = 'mark.Pilot1@cae.com';
-                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
-                      const subject = 'Automated Email - LiLane14 license';
-                      const body = 'Your LiLane14 is going to expire. Please contact Plato.';
+                    if (remainingDaysLiLane1Pilot1 <= 30 && !document.getElementById("emailSent30LiLane14Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane14Pilot1} license`;
+                      const body = `Your ${getLiLane14Pilot1} is going to expire. 30 Days left. Please contact xxx.`;
 
+                      // Korrekte Mailto-URL mit CC
                       const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
                       window.location.href = mailtoLink;
 
-                      document.getElementById("emailSentLiLane14Pilot1").checked = true;
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent30LiLane14Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 60 && !document.getElementById("emailSent60LiLane14Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane14Pilot1} license`;
+                      const body = `Your ${getLiLane14Pilot1} is going to expire. 60 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent60LiLane14Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 90 && !document.getElementById("emailSent90LiLane14Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane14Pilot1} license`;
+                      const body = `Your ${getLiLane14Pilot1} is going to expire. 90 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent90LiLane14Pilot1").checked = true;
                     }
 
 // LiLane14 Pilot1 --------Ende---------------------------------------------
 
-// LiLane14 Pilot1 --------Anfang---------------------------------------------
+// LiLane15 Pilot1 --------Anfang---------------------------------------------
 
 let ValidityStringLiLane15Pilot1 = document.getElementById("validityLiLane15Pilot1").innerText;
                     let validityLiLane15Pilot1 = +ValidityStringLiLane15Pilot1;
@@ -1291,17 +1768,48 @@ let ValidityStringLiLane15Pilot1 = document.getElementById("validityLiLane15Pilo
                     const remainingTimeLiLane15Pilot1 = NewExpiryDateLiLane15Pilot1 - currentDate;
                     const remainingDaysLiLane15Pilot1 = Math.floor(remainingTimeLiLane15Pilot1 / (1000 * 60 * 60 * 24));
                     document.getElementById("remDaysLiLane15Pilot1").innerText = remainingDaysLiLane15Pilot1;
-                    if (remainingDaysLiLane15Pilot1 < 60 && !document.getElementById("emailSentLiLane15Pilot1").checked) {
-                      const recipient = 'mark.Pilot1@cae.com';
-                      const ccRecipient = 'janine.mcmullan@cae.com, phillip.barrie@cae.com';  
-                      const subject = 'Automated Email - LiLane15 license';
-                      const body = 'Your LiLane15 is going to expire. Please contact Plato.';
+                    if (remainingDaysLiLane1Pilot1 <= 30 && !document.getElementById("emailSent30LiLane15Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane15Pilot1} license`;
+                      const body = `Your ${getLiLane15Pilot1} is going to expire. 30 Days left. Please contact xxx.`;
 
+                      // Korrekte Mailto-URL mit CC
                       const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
                       window.location.href = mailtoLink;
 
-                      document.getElementById("emailSentLiLane15Pilot1").checked = true;
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent30LiLane15Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 60 && !document.getElementById("emailSent60LiLane15Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane15Pilot1} license`;
+                      const body = `Your ${getLiLane15Pilot1} is going to expire. 60 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent60LiLane15Pilot1").checked = true;
+                    } else if (remainingDaysLiLane1Pilot1 <= 90 && !document.getElementById("emailSent90LiLane15Pilot1").checked) {
+                      const recipient = 'Pilot1@abc.com';
+                      const ccRecipient = 'xxx@abc.com, xyz@abc.com';  // Hier die CC-E-Mail-Adresse einfügen, weitere emails durch Komma getrennt
+                      const subject = `Automated Email - ${getLiLane15Pilot1} license`;
+                      const body = `Your ${getLiLane15Pilot1} is going to expire. 90 Days left. Please contact xxx.`;
+
+                      // Korrekte Mailto-URL mit CC
+                      const mailtoLink = `mailto:${recipient}?cc=${encodeURIComponent(ccRecipient)}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+                      // E-Mail-Link öffnen (E-Mail-Client wird geöffnet)
+                      window.location.href = mailtoLink;
+
+                      // Optional: Checkbox nach dem Senden der E-Mail aktualisieren
+                      document.getElementById("emailSent90LiLane15Pilot1").checked = true;
                     }
 
 // LiLane15 Pilot1 --------Ende---------------------------------------------
@@ -1674,11 +2182,24 @@ const NameTablePilot2 = "Pilot Name 2";
       document.querySelector("#headSubPilot2").innerText = `${NameTablePilot2}  / License No.: ${LicenseNameTablePilot2}`;
 
 
+
+      document.querySelectorAll(".remDays").forEach(zelle => {
+      let zahl = parseInt(zelle.innerText, 10);
+
+      if (zahl <= 0) {
+        zelle.style.backgroundColor = "red";
+        zelle.style.color = "white";
+      } else if (zahl <= 90) {
+        zelle.style.backgroundColor = "yellow";
+      }
+    });
+
+
   }, 100); // 100ms warten, damit `loadTableData()` zuerst läuft
             
           };
   
-
+          
 
 
 </script>
